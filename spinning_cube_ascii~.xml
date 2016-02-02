@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Code\vvvv\learning-vvvvv\spinning_cube_ascii.v4p" scrollx="345" scrolly="225" systemname="spinning_cube_ascii" filename="C:\Code\vvvv\learning-vvvvv\spinning_cube_ascii.v4p">
+   <PATCH nodename="C:\Code\vvvv\learning-vvvvv\spinning_cube_ascii.v4p" scrollx="345" scrolly="1305" systemname="spinning_cube_ascii" filename="C:\Code\vvvv\learning-vvvvv\spinning_cube_ascii.v4p">
    <BOUNDS type="Window" left="5640" top="8415" width="9360" height="7995">
    </BOUNDS>
    <NODE systemname="LinearSpread (Spreads)" nodename="LinearSpread (Spreads)" componentmode="Hidden" id="3">
@@ -11,7 +11,7 @@
    </PIN>
    <PIN pinname="Phase" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Width" slicecount="1" values="0.8">
+   <PIN pinname="Width" slicecount="1" values="0.7">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="4" systemname="IOBox (Value Advanced)">
@@ -19,7 +19,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3855" top="630" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="3">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -153,7 +153,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="5145" top="2580" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.08486,0.20483,0.58973,0.65891|">
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.09782,0.23975,0.67976,0.65891|">
    </PIN>
    </NODE>
    <LINK srcnodeid="12" srcpinname="Color Output" dstnodeid="7" dstpinname="Ambient Color">
@@ -163,7 +163,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3795" top="1770" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.16">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.66">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
