@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Code\vvvv\learning-vvvvv\triangle_circle.v4p" scrollx="0" scrolly="360" systemname="triangle_circle" filename="C:\Code\vvvv\learning-vvvvv\triangle_circle.v4p">
+   <PATCH nodename="C:\Code\vvvv\learning-vvvvv\triangle_circle.v4p" scrollx="120" scrolly="0" systemname="triangle_circle" filename="C:\Code\vvvv\learning-vvvvv\triangle_circle.v4p">
    <BOUNDS type="Window" left="5385" top="8415" width="9000" height="9585">
    </BOUNDS>
    <NODE systemname="CircularSpread (Spreads)" nodename="CircularSpread (Spreads)" componentmode="Hidden" id="2">
@@ -97,7 +97,7 @@
    <NODE systemname="LinearSpread (Spreads)" nodename="LinearSpread (Spreads)" componentmode="Hidden" id="8">
    <BOUNDS type="Node" left="3435" top="615" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Spread Count" visible="1">
+   <PIN pinname="Spread Count" visible="1" slicecount="1" values="11">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -111,7 +111,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="2265" top="2955" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="11">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="24">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -123,8 +123,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="9" srcpinname="Y Output Value" dstnodeid="2" dstpinname="Spread Count">
-   </LINK>
-   <LINK srcnodeid="9" srcpinname="Y Output Value" dstnodeid="8" dstpinname="Spread Count">
    </LINK>
    <LINK srcnodeid="8" srcpinname="Output" dstnodeid="6" dstpinname="Rotate">
    </LINK>
@@ -217,7 +215,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="2520" top="15" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1.6">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="2.5">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="s">
    </PIN>
@@ -293,7 +291,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1275" top="1995" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.24">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.11">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -305,13 +303,13 @@
    <NODE systemname="LinearSpread (Spreads)" nodename="LinearSpread (Spreads)" componentmode="Hidden" id="28">
    <BOUNDS type="Node" left="165" top="1710" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Spread Count" visible="1" slicecount="1" values="99">
+   <PIN pinname="Spread Count" visible="1" slicecount="1" values="120">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Width" slicecount="1" values="1.92">
+   <PIN pinname="Width" slicecount="1" values="0.92">
    </PIN>
-   <PIN pinname="Input" slicecount="1" values="0.96">
+   <PIN pinname="Input" slicecount="1" values="1.15">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="30" systemname="IOBox (Value Advanced)">
@@ -353,11 +351,13 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Width" slicecount="1" values="1.28">
+   <PIN pinname="Width" slicecount="1" values="1.24">
    </PIN>
-   <PIN pinname="Input" slicecount="1" values="1.08">
+   <PIN pinname="Input" slicecount="1" values="0.55">
    </PIN>
    </NODE>
    <LINK srcnodeid="32" srcpinname="Output" dstnodeid="11" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="9" srcpinname="Y Output Value" dstnodeid="8" dstpinname="Spread Count">
    </LINK>
    </PATCH>
