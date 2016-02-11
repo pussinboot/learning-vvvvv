@@ -2,7 +2,8 @@
 
 #### parasitic design tutorial series
 
-[P_1_0 Hello Color](https://github.com/pussinboot/learning-vvvvv/tree/master/parasitic_redesign/P_1_0%20Hello%20Color)
+**[P_1_0 Hello Color](https://github.com/pussinboot/learning-vvvvv/tree/master/parasitic_redesign/P_1_0%20Hello%20Color)**
+
 ![P_1_0_01](https://raw.githubusercontent.com/pussinboot/learning-vvvvv/master/previews/parasitic_redesign/P_1_0_01.png)
 
 ![P_1_1_1](https://raw.githubusercontent.com/pussinboot/learning-vvvvv/master/previews/parasitic_redesign/P_1_1_1_01.png)
