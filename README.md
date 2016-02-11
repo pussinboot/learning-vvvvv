@@ -26,3 +26,7 @@
 
 ![P_2_1_1_01](https://raw.githubusercontent.com/pussinboot/learning-vvvvv/master/previews/parasitic_redesign/P_2_1_1_01.png)
 
+**[P_2_1_2_01 Displacement in a Grid](https://github.com/pussinboot/learning-vvvvv/tree/master/parasitic_redesign/P_2_1_1_01%20Arrangement%20in%20a%20Grid)**
+
+![P_2_1_2_01](https://raw.githubusercontent.com/pussinboot/learning-vvvvv/master/previews/parasitic_redesign/P_2_1_1_01.png)
+
