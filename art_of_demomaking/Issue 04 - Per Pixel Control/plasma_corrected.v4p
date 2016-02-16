@@ -1,0 +1,7 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
+   <PATCH nodename="C:\Code\vvvv\learning-vvvvv\art_of_demomaking\Issue 04 - Per Pixel Control\plasma_corrected.v4p" systemname="plasma_corrected" filename="C:\Code\vvvv\learning-vvvvv\art_of_demomaking\Issue 04 - Per Pixel Control\plasma_corrected.v4p">
+   <BOUNDS type="Window" left="6705" top="6045" width="9000" height="6000">
+   </BOUNDS>
+   <PACK Name="addonpack" Version="34.1.0">
+   </PACK>
+   </PATCH>
