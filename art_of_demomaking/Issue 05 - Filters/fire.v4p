@@ -449,7 +449,7 @@
    </PIN>
    </NODE>
    <NODE id="143" systemname="LT (Value)" nodename="LT (Value)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
-   <PIN pinname="Input 1" visible="1" pintype="Input" slicecount="1" values="0">
+   <PIN pinname="Input 1" visible="1" pintype="Input" slicecount="3" values="-1,0,1">
    </PIN>
    <PIN pinname="Input 2" visible="1" pintype="Input" slicecount="1" values="0">
    </PIN>
@@ -473,7 +473,7 @@
    </PIN>
    <BOUNDS type="Node" left="1770" top="12400" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 1" visible="1" pintype="Input" slicecount="1" values="0">
+   <PIN pinname="Input 1" visible="1" pintype="Input" slicecount="3" values="-1,0,1">
    </PIN>
    <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
    </PIN>
@@ -585,7 +585,7 @@
    <NODE id="139" systemname="GE (Value)" nodename="GE (Value)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
    <BOUNDS type="Node" left="3780" top="12355" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 1" visible="1" pintype="Input">
+   <PIN pinname="Input 1" visible="1" pintype="Input" slicecount="3" values="-1,0,1">
    </PIN>
    <PIN pinname="Output" visible="1" pintype="Output">
    </PIN>
@@ -703,7 +703,7 @@
    </BOUNDS>
    <PIN pinname="Output" visible="1" pintype="Output">
    </PIN>
-   <PIN pinname="Input 1" visible="1" pintype="Input">
+   <PIN pinname="Input 1" visible="1" pintype="Input" slicecount="3" values="-1,0,1">
    </PIN>
    <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
    </PIN>
@@ -857,7 +857,7 @@
    </PIN>
    <PIN pinname="Input 1" visible="1" pintype="Input" slicecount="6" values="0,0,0,1,1,1">
    </PIN>
-   <BOUNDS type="Node" left="1950" top="11665" width="100" height="100">
+   <BOUNDS type="Node" left="1875" top="11260" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
    </PIN>
@@ -875,7 +875,7 @@
    </PIN>
    <PIN pinname="Input 1" visible="1" pintype="Input" slicecount="3" values="0,0,0">
    </PIN>
-   <BOUNDS type="Node" left="3960" top="11620" width="100" height="100">
+   <BOUNDS type="Node" left="4305" top="11065" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
    </PIN>
@@ -891,7 +891,7 @@
    </PIN>
    <PIN pinname="Input 2" visible="1" pintype="Input" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Input 1" visible="1" pintype="Input" slicecount="1" values="1">
+   <PIN pinname="Input 1" visible="1" pintype="Input" slicecount="3" values="-1,0,1">
    </PIN>
    <BOUNDS type="Node" left="2565" top="13255" width="100" height="100">
    </BOUNDS>
@@ -929,7 +929,7 @@
    </PIN>
    <PIN pinname="Y In" visible="1" slicecount="3" pintype="Input" values="-1,0,1">
    </PIN>
-   <PIN pinname="X In" visible="1" pintype="Input" slicecount="1" values="0">
+   <PIN pinname="X In" visible="1" pintype="Input" slicecount="3" values="-1,0,1">
    </PIN>
    <BOUNDS type="Node" left="2235" top="13780" width="100" height="100">
    </BOUNDS>
@@ -951,7 +951,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1920" top="15025" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" visible="1" slicecount="18" pintype="Input" values="-161,-160,-160,-159,-159,-158,-1,0,0,1,1,2,159,160,160,161,161,162">
+   <PIN pinname="Y Input Value" visible="1" slicecount="18" pintype="Input" values="-161,-160,-159,-1,0,1,-1,0,1,159,160,161,159,160,161,319,320,321">
    </PIN>
    <PIN pinname="Units" slicecount="1" pintype="Configuration" values="||">
    </PIN>
@@ -1178,11 +1178,7 @@
    <PIN pinname="ID" pintype="Output" visible="-1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="131" srcpinname="Output" dstnodeid="142" dstpinname="Input 1">
-   </LINK>
    <LINK srcnodeid="141" srcpinname="Y Output Value" dstnodeid="142" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="131" srcpinname="Output" dstnodeid="127" dstpinname="X In">
    </LINK>
    <LINK srcnodeid="129" srcpinname="Output" dstnodeid="127" dstpinname="Y In">
    </LINK>
@@ -1194,15 +1190,9 @@
    </LINK>
    <LINK srcnodeid="143" srcpinname="Output" dstnodeid="135" dstpinname="Input 2">
    </LINK>
-   <LINK srcnodeid="130" srcpinname="Output" dstnodeid="129" dstpinname="Input 1">
-   </LINK>
    <LINK srcnodeid="147" srcpinname="Y Output Value" dstnodeid="129" dstpinname="Input 2">
    </LINK>
-   <LINK srcnodeid="131" srcpinname="Output" dstnodeid="143" dstpinname="Input 1">
-   </LINK>
    <LINK srcnodeid="147" srcpinname="Y Output Value" dstnodeid="143" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="130" srcpinname="Output" dstnodeid="139" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="137" srcpinname="Y Output Value" dstnodeid="139" dstpinname="Input 2">
    </LINK>
@@ -1213,8 +1203,6 @@
    <LINK srcnodeid="135" srcpinname="Output" dstnodeid="134" dstpinname="X In">
    </LINK>
    <LINK srcnodeid="138" srcpinname="Output" dstnodeid="134" dstpinname="Y In">
-   </LINK>
-   <LINK srcnodeid="130" srcpinname="Output" dstnodeid="136" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="146" srcpinname="Y Output Value" dstnodeid="136" dstpinname="Input 2">
    </LINK>
@@ -1413,7 +1401,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="2055" top="8865" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="2">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -1425,7 +1413,7 @@
    <LINK srcnodeid="177" srcpinname="Y Output Value" dstnodeid="176" dstpinname=".. To [">
    </LINK>
    <NODE systemname="Cross (2d)" nodename="Cross (2d)" componentmode="Hidden" id="187">
-   <BOUNDS type="Node" left="1890" top="10800" width="100" height="100">
+   <BOUNDS type="Node" left="1950" top="10710" width="100" height="100">
    </BOUNDS>
    <PIN pinname="X Out" visible="1">
    </PIN>
@@ -1445,7 +1433,7 @@
    <LINK srcnodeid="124" srcpinname="Y Output Value" dstnodeid="187" dstpinname="X In">
    </LINK>
    <NODE systemname="Cross (2d)" nodename="Cross (2d)" componentmode="Hidden" id="188">
-   <BOUNDS type="Node" left="3840" top="10785" width="100" height="100">
+   <BOUNDS type="Node" left="3795" top="10530" width="100" height="100">
    </BOUNDS>
    <PIN pinname="X Out" visible="1">
    </PIN>
@@ -1464,24 +1452,6 @@
    </LINK>
    <LINK srcnodeid="188" srcpinname="Y Out" dstnodeid="130" dstpinname="Input 2">
    </LINK>
-   <NODE systemname="SwapDim (Spreads)" nodename="SwapDim (Spreads)" componentmode="Hidden" id="189">
-   <BOUNDS type="Node" left="3045" top="14310" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Bin Size" slicecount="1" values="2">
-   </PIN>
-   <PIN pinname="Column Count" slicecount="1" visible="1" values="1">
-   </PIN>
-   <PIN pinname="Row Count" slicecount="1" visible="1" values="9">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="128" srcpinname="Output" dstnodeid="189" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="189" srcpinname="Output" dstnodeid="126" dstpinname="Y Input Value">
-   </LINK>
    <NODE systemname="Count (Value)" nodename="Count (Value)" componentmode="Hidden" id="190">
    <BOUNDS type="Node" left="3225" top="13590" width="100" height="100">
    </BOUNDS>
@@ -1491,28 +1461,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="124" srcpinname="Y Output Value" dstnodeid="190" dstpinname="Input">
-   </LINK>
-   <NODE systemname="SwapDim (Spreads)" nodename="SwapDim (Spreads)" componentmode="Hidden" id="192">
-   <BOUNDS type="Node" left="5235" top="14640" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Bin Size" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Column Count" slicecount="1" visible="1" values="0">
-   </PIN>
-   <PIN pinname="Row Count" slicecount="1" visible="1" values="9">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="133" srcpinname="Output" dstnodeid="192" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="190" srcpinname="Count" dstnodeid="192" dstpinname="Column Count">
-   </LINK>
-   <LINK srcnodeid="144" srcpinname="Count" dstnodeid="192" dstpinname="Row Count">
-   </LINK>
-   <LINK srcnodeid="192" srcpinname="Output" dstnodeid="132" dstpinname="Y Input Value">
    </LINK>
    <NODE systemname="I (Spreads)" nodename="I (Spreads)" componentmode="Hidden" id="194">
    <BOUNDS type="Node" left="2970" top="8460" width="100" height="100">
@@ -1527,7 +1475,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3210" top="9105" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="2">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -1539,5 +1487,75 @@
    <LINK srcnodeid="193" srcpinname="Y Output Value" dstnodeid="194" dstpinname=".. To [">
    </LINK>
    <LINK srcnodeid="194" srcpinname="Output" dstnodeid="125" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="128" srcpinname="Output" dstnodeid="126" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="133" srcpinname="Output" dstnodeid="132" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="SwapDim (Spreads)" nodename="SwapDim (Spreads)" componentmode="Hidden" id="196">
+   <BOUNDS type="Node" left="4335" top="11595" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Column Count" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Row Count" slicecount="1" visible="1" values="3">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="130" srcpinname="Output" dstnodeid="196" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Count (Value)" nodename="Count (Value)" componentmode="Hidden" id="197">
+   <BOUNDS type="Node" left="2865" top="10515" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Count" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="125" srcpinname="Y Output Value" dstnodeid="197" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="197" srcpinname="Count" dstnodeid="196" dstpinname="Column Count">
+   </LINK>
+   <LINK srcnodeid="145" srcpinname="Output Real" dstnodeid="196" dstpinname="Row Count">
+   </LINK>
+   <LINK srcnodeid="196" srcpinname="Output" dstnodeid="136" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="196" srcpinname="Output" dstnodeid="139" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="196" srcpinname="Output" dstnodeid="129" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="SwapDim (Spreads)" nodename="SwapDim (Spreads)" componentmode="Hidden" id="198">
+   <BOUNDS type="Node" left="1860" top="11820" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Row Count" visible="1" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Column Count" visible="1" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Bin Size" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="131" srcpinname="Output" dstnodeid="198" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="198" srcpinname="Output" dstnodeid="142" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="198" srcpinname="Output" dstnodeid="127" dstpinname="X In">
+   </LINK>
+   <LINK srcnodeid="198" srcpinname="Output" dstnodeid="143" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="Count (Value)" nodename="Count (Value)" componentmode="Hidden" id="199">
+   <BOUNDS type="Node" left="810" top="10155" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Count" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="124" srcpinname="Y Output Value" dstnodeid="199" dstpinname="Input">
    </LINK>
    </PATCH>
