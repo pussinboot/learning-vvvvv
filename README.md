@@ -12,7 +12,8 @@
 
 **[P_1_1_2 Color Spectrum in a Circle](https://github.com/pussinboot/learning-vvvvv/tree/master/parasitic_redesign/P_1_1_2%20Color%20Spectrum%20in%20a%20Circle)**
 
-<img src="./previews/parasitic_redesign/P_1_1_2_01.png" height="100px" align="left">
+<img src="./previews/parasitic_redesign/P_1_1_2_01.png" height="200px">
+
 <br><br>
 
 **[P_1_2_3_01 Color Palettes out of Rules](https://github.com/pussinboot/learning-vvvvv/tree/master/parasitic_redesign/P_1_2_3_01%20Color%20Palettes%20out%20of%20Rules)**
