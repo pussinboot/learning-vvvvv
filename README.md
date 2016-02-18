@@ -22,3 +22,6 @@
 | :---: | :---: | :---: |
 | <a href="https://github.com/pussinboot/learning-vvvvv/tree/master/parasitic_redesign/P_2_1_1_01%20Arrangement%20in%20a%20Grid"><img src="./previews/parasitic_redesign/P_2_1_1_01.png" height="200px"></a> | <a href="https://github.com/pussinboot/learning-vvvvv/tree/master/parasitic_redesign/P_2_1_2_01%20Displacement%20in%20a%20Grid"><img src="./previews/parasitic_redesign/P_2_1_2_01.png" height="200px"></a> | <a href="https://github.com/pussinboot/learning-vvvvv/tree/master/parasitic_redesign/P_2_1_3_01%20Complex%20module%20in%20a%20Grid"><img src="./previews/parasitic_redesign/P_2_1_3_01.png" height="200px"></a> 
 
+| P_2_2_1_01 Stupid Agent |
+| :---: |
+| <a href="https://github.com/pussinboot/learning-vvvvv/tree/master/parasitic_redesign/P_2_2_1_01%20Stupid%20Agent"><img src="./previews/parasitic_redesign/P_2_2_1_01.gif" height="200px"></a> |
