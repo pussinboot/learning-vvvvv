@@ -951,7 +951,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1920" top="15025" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" visible="1" slicecount="18" pintype="Input" values="-161,-160,-159,-1,0,1,-1,0,1,159,160,161,159,160,161,319,320,321">
+   <PIN pinname="Y Input Value" visible="1" slicecount="18" pintype="Input" values="-159,-160,-159,-158,-1,0,1,-161,-160,2,159,160,161,160,161,162,0,1">
    </PIN>
    <PIN pinname="Units" slicecount="1" pintype="Configuration" values="||">
    </PIN>
@@ -1488,8 +1488,6 @@
    </LINK>
    <LINK srcnodeid="194" srcpinname="Output" dstnodeid="125" dstpinname="Y Input Value">
    </LINK>
-   <LINK srcnodeid="128" srcpinname="Output" dstnodeid="126" dstpinname="Y Input Value">
-   </LINK>
    <LINK srcnodeid="133" srcpinname="Output" dstnodeid="132" dstpinname="Y Input Value">
    </LINK>
    <NODE systemname="SwapDim (Spreads)" nodename="SwapDim (Spreads)" componentmode="Hidden" id="196">
@@ -1557,5 +1555,11 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="124" srcpinname="Y Output Value" dstnodeid="199" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="199" srcpinname="Count" dstnodeid="198" dstpinname="Column Count">
+   </LINK>
+   <LINK srcnodeid="145" srcpinname="Output Real" dstnodeid="198" dstpinname="Row Count">
+   </LINK>
+   <LINK srcnodeid="128" srcpinname="Output" dstnodeid="126" dstpinname="Y Input Value">
    </LINK>
    </PATCH>
