@@ -1,0 +1,519 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta28.dtd" >
+   <PATCH nodename="C:\Users\Marco Tempest\ParasiticDesign\01_P\P_2_2_5_01 Density structure of Agents\P_2_2_5_01.v4p" filename="0.v4p ////" systemname="0.v4p ////">
+   <BOUNDS height="9390" left="345" top="375" type="Window" width="12750">
+   </BOUNDS>
+   <NODE componentmode="InAWindow" id="0" nodename="Renderer (EX9)" systemname="RENDERER (EX9)">
+   <BOUNDS height="100" left="8685" top="8310" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="1800" left="8685" top="8310" type="Box" width="2400">
+   </BOUNDS>
+   <BOUNDS height="8190" left="13095" top="375" type="Window" width="7920">
+   </BOUNDS>
+   <PIN pinname="Layers" visible="1">
+   </PIN>
+   <PIN pinname="Aspect Ratio" visible="1">
+   </PIN>
+   <PIN pinname="Actual Backbuffer Width" visible="1">
+   </PIN>
+   <PIN pinname="Actual Backbuffer Height" visible="1">
+   </PIN>
+   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Windowed Antialiasing Quality Level" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Fullscreen Depthbuffer Format" slicecount="1" values="NONE">
+   </PIN>
+   <PIN pinname="Fullscreen Dimensions" slicecount="1" values="|1024 x 768|">
+   </PIN>
+   <PIN pinname="Fullscreen Antialiasing Quality Level" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Windowed Depthbuffer Format" slicecount="1" values="NONE">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="2" nodename="AspectRatio (Transform)" systemname="AspectRatio (Transform)">
+   <BOUNDS height="100" left="10380" top="8310" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Aspect Width" visible="1">
+   </PIN>
+   <PIN pinname="Aspect Height" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="0" dstpinname="Aspect Ratio" srcnodeid="2" srcpinname="Transform Out">
+   </LINK>
+   <LINK dstnodeid="2" dstpinname="Aspect Width" srcnodeid="0" srcpinname="Actual Backbuffer Width">
+   </LINK>
+   <LINK dstnodeid="2" dstpinname="Aspect Height" srcnodeid="0" srcpinname="Actual Backbuffer Height">
+   </LINK>
+   <NODE componentmode="Hidden" hiddenwhenlocked="0" id="26" nodename="FrameDelay (Animation)" systemname="FrameDelay (Animation)">
+   <BOUNDS height="100" left="7680" top="5160" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   <PIN pinname="Initialize" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" hiddenwhenlocked="0" id="27" nodename="FrameDelay (Animation)" systemname="FrameDelay (Animation)">
+   <BOUNDS height="100" left="10380" top="5160" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output 1" visible="1">
+   </PIN>
+   <PIN pinname="Initialize" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Default 1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="57" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="120" top="510" type="Node" width="840">
+   </BOUNDS>
+   <BOUNDS height="285" left="120" top="510" type="Box" width="4200">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|pack as many cirlces as possible together|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="7">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="56" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="120" top="120" type="Node" width="945">
+   </BOUNDS>
+   <BOUNDS height="465" left="120" top="120" type="Box" width="4110">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|Density structure of Agents|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="15">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="55" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="3960" top="900" type="Node" width="840">
+   </BOUNDS>
+   <BOUNDS height="825" left="3960" top="900" type="Box" width="3195">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|KEYS&cr;&lf;arrow up/down:&tab;resize area of interest&cr;&lf;ctrl+2:&tab;&tab;save png|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="7">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="58" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="135" top="900" type="Node" width="840">
+   </BOUNDS>
+   <BOUNDS height="825" left="135" top="900" type="Box" width="3750">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|MOUSE&cr;&lf;press + position x/y:&tab;move area of interest|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="7">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" filename="ROI.v4p" id="80" nodename="ROI.v4p" systemname="ROI">
+   <BOUNDS height="100" left="9780" top="1485" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Size" visible="1">
+   </PIN>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="86" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="585" top="2190" type="Node" width="7425">
+   </BOUNDS>
+   <BOUNDS height="3030" left="585" top="2190" type="Box" width="4095">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|Creates a random position (XY) for a new circle in a given region of interest. &cr;&lf;&cr;&lf;Defines the region of interest.&cr;&lf;&cr;&lf;Checks if the new position intersects with any of the existing circles. If not, it looks for the closest circle and chooses a radius so that the new circle touches its closest circle.&cr;&lf;&cr;&lf;Queues positions and radii of circles.&cr;&lf;&cr;&lf;Draws circles and lines.|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="85" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="135" top="2160" type="Node" width="315">
+   </BOUNDS>
+   <BOUNDS height="390" left="135" top="2160" type="Box" width="405">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="1.">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="16">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="84" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="135" top="2730" type="Node" width="315">
+   </BOUNDS>
+   <BOUNDS height="405" left="135" top="2730" type="Box" width="420">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="2.">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="16">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="83" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="135" top="3225" type="Node" width="315">
+   </BOUNDS>
+   <BOUNDS height="405" left="135" top="3225" type="Box" width="450">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="3.">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="16">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="82" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="135" top="4200" type="Node" width="315">
+   </BOUNDS>
+   <BOUNDS height="405" left="135" top="4200" type="Box" width="450">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="4.">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="16">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" filename="CreateCircle.v4p" id="87" nodename="CreateCircle.v4p" systemname="CreateCircle">
+   <BOUNDS height="100" left="8925" top="2310" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="3600" left="8925" top="2310" type="Box" width="4800">
+   </BOUNDS>
+   <BOUNDS height="5640" left="12765" top="4965" type="Window" width="6960">
+   </BOUNDS>
+   <PIN pinname="ROI Size" visible="1">
+   </PIN>
+   <PIN pinname="ROI Center" visible="1">
+   </PIN>
+   <PIN pinname="Position" visible="1">
+   </PIN>
+   <PIN pinname="New Position" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="87" dstpinname="ROI Size" srcnodeid="80" srcpinname="Size">
+   </LINK>
+   <LINK dstnodeid="87" dstpinname="ROI Center" srcnodeid="80" srcpinname="XY">
+   </LINK>
+   <LINK dstnodeid="18" dstpinname="XY" srcnodeid="87" srcpinname="Position">
+   </LINK>
+   <LINK dstnodeid="13" dstpinname="Input" srcnodeid="87" srcpinname="Position">
+   </LINK>
+   <NODE componentmode="Hidden" filename="PlaceCircle.v4p" id="88" nodename="PlaceCircle.v4p" systemname="PlaceCircle">
+   <BOUNDS height="270" left="8685" top="3510" type="Node" width="1260">
+   </BOUNDS>
+   <BOUNDS height="3600" left="8685" top="3510" type="Box" width="4800">
+   </BOUNDS>
+   <BOUNDS height="10650" left="1935" top="4725" type="Window" width="13185">
+   </BOUNDS>
+   <PIN pinname="New Position" visible="1">
+   </PIN>
+   <PIN pinname="All Positions" visible="1">
+   </PIN>
+   <PIN pinname="Position of closest Circle" visible="1">
+   </PIN>
+   <PIN pinname="All Radii" visible="1">
+   </PIN>
+   <PIN pinname="Insert new Position" visible="1">
+   </PIN>
+   <PIN pinname="New Radius" visible="1">
+   </PIN>
+   <PIN pinname="Closest Circle Position" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="88" dstpinname="New Position" srcnodeid="87" srcpinname="New Position">
+   </LINK>
+   <LINK dstnodeid="88" dstpinname="All Positions" linkstyle="Bezier" srcnodeid="26" srcpinname="Output 1">
+   <LINKPOINT x="6690" y="6675">
+   </LINKPOINT>
+   <LINKPOINT x="6825" y="1935">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="43" dstpinname="Input" srcnodeid="88" srcpinname="Position of closest Circle">
+   </LINK>
+   <LINK dstnodeid="88" dstpinname="All Radii" hiddenwhenlocked="0" linkstyle="Bezier" srcnodeid="27" srcpinname="Output 1">
+   <LINKPOINT x="12015" y="6840">
+   </LINKPOINT>
+   <LINKPOINT x="12270" y="2040">
+   </LINKPOINT>
+   </LINK>
+   <NODE componentmode="Hidden" filename="DrawCirclesAndLines.v4p" id="91" nodename="DrawCirclesAndLines.v4p" systemname="DrawCirclesAndLines">
+   <BOUNDS height="270" left="8685" top="7110" type="Node" width="2460">
+   </BOUNDS>
+   <BOUNDS height="3600" left="8685" top="7110" type="Box" width="4800">
+   </BOUNDS>
+   <BOUNDS height="6375" left="3045" top="8310" type="Window" width="13695">
+   </BOUNDS>
+   <PIN pinname="Closest Circle Positions" visible="1">
+   </PIN>
+   <PIN pinname="Positions" visible="1">
+   </PIN>
+   <PIN pinname="Radii" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Enable Lines" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Enable Circles" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="92" nodename="Group (EX9)" systemname="Group (EX9)">
+   <BOUNDS height="270" left="8685" top="7860" type="Node" width="2730">
+   </BOUNDS>
+   <PIN pinname="Layer 2" visible="1">
+   </PIN>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="0" dstpinname="Layers" srcnodeid="92" srcpinname="Layer">
+   </LINK>
+   <LINK dstnodeid="92" dstpinname="Layer 1" srcnodeid="91" srcpinname="Layer">
+   </LINK>
+   <LINK dstnodeid="92" dstpinname="Layer 2" hiddenwhenlocked="1" srcnodeid="80" srcpinname="Layer">
+   </LINK>
+   <NODE componentmode="InABox" id="93" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="135" top="4710" type="Node" width="315">
+   </BOUNDS>
+   <BOUNDS height="405" left="135" top="4710" type="Box" width="450">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="5.">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="16">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="94" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="8430" top="2235" type="Node" width="315">
+   </BOUNDS>
+   <BOUNDS height="390" left="8430" top="2235" type="Box" width="405">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="1.">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="16">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="95" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="9225" top="1410" type="Node" width="315">
+   </BOUNDS>
+   <BOUNDS height="405" left="9225" top="1410" type="Box" width="420">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="2.">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="16">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="96" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="8085" top="3435" type="Node" width="315">
+   </BOUNDS>
+   <BOUNDS height="405" left="8085" top="3435" type="Box" width="450">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="3.">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="16">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="97" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="8100" top="4365" type="Node" width="315">
+   </BOUNDS>
+   <BOUNDS height="405" left="8100" top="4365" type="Box" width="450">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="4.">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="16">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="98" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="8160" top="6990" type="Node" width="315">
+   </BOUNDS>
+   <BOUNDS height="405" left="8160" top="6990" type="Box" width="450">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="5.">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="16">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="103" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="10875" top="1830" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="480" left="10875" top="1830" type="Box" width="480">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="102" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="11490" top="1890" type="Node" width="795">
+   </BOUNDS>
+   <BOUNDS height="270" left="11490" top="1890" type="Box" width="795">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|&lt; restart|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="101" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="10875" top="2445" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="10875" top="2445" type="Box" width="525">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="1000">
+   </PIN>
+   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="100" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="11490" top="2415" type="Node" width="795">
+   </BOUNDS>
+   <BOUNDS height="315" left="11490" top="2415" type="Box" width="990">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|&lt; max count|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" filename="QueueCircles.v4p" id="89" nodename="QueueCircles.v4p" systemname="QueueCircles">
+   <PIN pinname="Closest Circle Position" visible="1">
+   </PIN>
+   <PIN pinname="Position" visible="1">
+   </PIN>
+   <PIN pinname="Radius" visible="1">
+   </PIN>
+   <PIN pinname="Insert" visible="1">
+   </PIN>
+   <PIN pinname="Reset" visible="1">
+   </PIN>
+   <BOUNDS height="6555" left="5190" top="8070" type="Window" width="14220">
+   </BOUNDS>
+   <BOUNDS height="270" left="8685" top="4455" type="Node" width="1260">
+   </BOUNDS>
+   <PIN pinname="Radii" visible="1">
+   </PIN>
+   <PIN pinname="Positions" visible="1">
+   </PIN>
+   <PIN pinname="Closest Circle Positions" visible="1">
+   </PIN>
+   <BOUNDS height="3600" left="8685" top="4455" type="Box" width="4800">
+   </BOUNDS>
+   <PIN pinname="Max Count" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="89" dstpinname="Reset" srcnodeid="103" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="27" dstpinname="Input 1" srcnodeid="89" srcpinname="Radii">
+   </LINK>
+   <LINK dstnodeid="91" dstpinname="Radii" hiddenwhenlocked="0" srcnodeid="89" srcpinname="Radii">
+   </LINK>
+   <LINK dstnodeid="91" dstpinname="Positions" hiddenwhenlocked="0" srcnodeid="89" srcpinname="Positions">
+   </LINK>
+   <LINK dstnodeid="91" dstpinname="Closest Circle Positions" hiddenwhenlocked="0" srcnodeid="89" srcpinname="Closest Circle Positions">
+   </LINK>
+   <LINK dstnodeid="26" dstpinname="Input 1" srcnodeid="89" srcpinname="Positions">
+   </LINK>
+   <LINK dstnodeid="89" dstpinname="Insert" srcnodeid="88" srcpinname="Insert new Position">
+   </LINK>
+   <LINK dstnodeid="89" dstpinname="Radius" srcnodeid="88" srcpinname="New Radius">
+   </LINK>
+   <LINK dstnodeid="89" dstpinname="Position" srcnodeid="87" srcpinname="New Position">
+   </LINK>
+   <LINK dstnodeid="89" dstpinname="Closest Circle Position" srcnodeid="88" srcpinname="Closest Circle Position">
+   </LINK>
+   <LINK dstnodeid="89" dstpinname="Max Count" srcnodeid="101" srcpinname="Y Output Value">
+   </LINK>
+   </PATCH>
