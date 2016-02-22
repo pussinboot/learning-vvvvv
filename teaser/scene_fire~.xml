@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Code\vvvv\learning-vvvvv\teaser\scene_fire.v4p" systemname="scene_fire" filename="C:\Code\vvvv\learning-vvvvv\teaser\scene_fire.v4p" scrollx="3315" scrolly="735">
+   <PATCH nodename="C:\Code\vvvv\learning-vvvvv\teaser\scene_fire.v4p" systemname="scene_fire" filename="C:\Code\vvvv\learning-vvvvv\teaser\scene_fire.v4p" scrollx="1950" scrolly="255">
    <BOUNDS type="Window" left="16440" top="3225" width="9000" height="5970">
    </BOUNDS>
    <NODE componentmode="Hidden" filename="%VVVV%\lib\nodes\effects\Chess.fx" id="0" nodename="Chess (EX9.Effect)" systemname="Chess (EX9.Effect)">
@@ -18,10 +18,10 @@
    <PIN pinname="Vertical" slicecount="1" values="16">
    </PIN>
    </NODE>
-   <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="InAWindow" id="1">
-   <BOUNDS type="Node" left="5190" top="3330" width="100" height="100">
+   <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="5070" top="3360" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="5190" top="3330" width="2400" height="1800">
+   <BOUNDS type="Box" left="5070" top="3360" width="2400" height="1800">
    </BOUNDS>
    <BOUNDS type="Window" left="22125" top="10650" width="6120" height="4860">
    </BOUNDS>
