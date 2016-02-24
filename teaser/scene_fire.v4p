@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Code\vvvv\learning-vvvvv\teaser\scene_fire.v4p" systemname="scene_fire" filename="C:\Code\vvvv\learning-vvvvv\teaser\scene_fire.v4p" scrollx="480" scrolly="0">
+   <PATCH nodename="C:\Code\vvvv\learning-vvvvv\teaser\scene_fire.v4p" systemname="scene_fire" filename="C:\Code\vvvv\learning-vvvvv\teaser\scene_fire.v4p" scrollx="0" scrolly="195">
    <BOUNDS type="Window" left="16440" top="3225" width="9000" height="5970">
    </BOUNDS>
    <NODE componentmode="Hidden" filename="%VVVV%\lib\nodes\effects\Chess.fx" id="0" nodename="Chess (EX9.Effect)" systemname="Chess (EX9.Effect)">
@@ -167,7 +167,7 @@
    </PIN>
    <PIN pinname="Z" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="X" slicecount="1" values="-0.31">
+   <PIN pinname="X" slicecount="1" values="-0.36">
    </PIN>
    <PIN pinname="Transform In" visible="1">
    </PIN>
@@ -179,9 +179,9 @@
    </PIN>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
-   <PIN pinname="Y" visible="1" slicecount="1" values="3.26">
+   <PIN pinname="Y" visible="1" slicecount="1" values="3.52">
    </PIN>
-   <PIN pinname="Z" slicecount="1" values="0">
+   <PIN pinname="Z" slicecount="1" values="-1.06">
    </PIN>
    <PIN pinname="X" slicecount="1" values="0">
    </PIN>
@@ -195,9 +195,9 @@
    </PIN>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
-   <PIN pinname="X" slicecount="1" visible="1" values="8.2">
+   <PIN pinname="X" slicecount="1" visible="1" values="10.85">
    </PIN>
-   <PIN pinname="Y" slicecount="1" visible="1" values="4.55">
+   <PIN pinname="Y" slicecount="1" visible="1" values="9.51">
    </PIN>
    <PIN pinname="Z" slicecount="1" values="1">
    </PIN>
@@ -305,7 +305,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="2460" top="6780" width="2400" height="1800">
    </BOUNDS>
-   <BOUNDS type="Window" left="9195" top="7320" width="6120" height="4860">
+   <BOUNDS type="Window" left="10455" top="9105" width="4965" height="4290">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -527,7 +527,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="9375" top="3150" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="24">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="32">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="px">
    </PIN>
@@ -599,9 +599,9 @@
    <LINK srcnodeid="59" srcpinname="Y Output Value" dstnodeid="58" dstpinname="Initial Interest">
    </LINK>
    <NODE nodename="IOBox (Color)" componentmode="InABox" id="61" systemname="IOBox (Color)">
-   <BOUNDS type="Box" left="4710" top="0" width="2250" height="480">
+   <BOUNDS type="Box" left="3375" top="75" width="2250" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="4710" top="0" width="0" height="0">
+   <BOUNDS type="Node" left="3375" top="75" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.40137,0.00000,0.41952,1.00000|">
    </PIN>
