@@ -16,10 +16,17 @@ struct vs2ps
     float4 Pos  : POSITION;
     float2 TexCd : TEXCOORD0;
 };
- 
+
+int Frequency = 50;
+float Phase = 0;
+float Amplitude = 1; 
 float4 PS(vs2ps In): COLOR
 {
-    return 1;
+    float2 cord = In.TexCd - 0.5;
+	float dist = sqrt(pow(cord.x,2) + pow(cord.y,2));
+	float4 col = sin(dist * Frequency + Phase) * Amplitude;
+	col.a = 1;
+	return col;
 }
  
 technique TSimpleShader
