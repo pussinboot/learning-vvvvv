@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Code\vvvv\learning-vvvvv\teaser\scene_fire.v4p" systemname="scene_fire" filename="C:\Code\vvvv\learning-vvvvv\teaser\scene_fire.v4p" scrollx="0" scrolly="-360">
-   <BOUNDS type="Window" left="14895" top="4635" width="12165" height="9750">
+   <PATCH nodename="C:\Code\vvvv\learning-vvvvv\teaser\scene_fire.v4p" systemname="scene_fire" filename="C:\Code\vvvv\learning-vvvvv\teaser\scene_fire.v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="4575" top="5010" width="12165" height="9750">
    </BOUNDS>
    <NODE componentmode="Hidden" filename="%VVVV%\lib\nodes\effects\Chess.fx" id="0" nodename="Chess (EX9.Effect)" systemname="Chess (EX9.Effect)">
    <BOUNDS height="100" left="1515" top="2355" type="Node" width="100">
@@ -108,6 +108,8 @@
    <PIN pinname="Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
    </PIN>
    <PIN pinname="Texture" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Texture Transform" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <NODE systemname="Scale (Transform)" nodename="Scale (Transform)" componentmode="Hidden" id="9">
@@ -290,12 +292,12 @@
    </LINK>
    <LINK srcnodeid="14" srcpinname="Layer" dstnodeid="25" dstpinname="Layer 1">
    </LINK>
-   <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="InABox" id="30">
+   <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="InAWindow" id="30">
    <BOUNDS type="Node" left="2460" top="6780" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="2460" top="6780" width="2400" height="1800">
    </BOUNDS>
-   <BOUNDS type="Window" left="9495" top="9990" width="9720" height="7560">
+   <BOUNDS type="Window" left="17340" top="9930" width="9720" height="7560">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -313,7 +315,7 @@
    </PIN>
    <PIN pinname="Y" visible="1" slicecount="1" values="-1.9">
    </PIN>
-   <PIN pinname="Z" slicecount="1" values="1.58" visible="1">
+   <PIN pinname="Z" slicecount="1" visible="1" values="1.58">
    </PIN>
    <PIN pinname="X" slicecount="1" values="0.01">
    </PIN>
@@ -367,7 +369,7 @@
    </BOUNDS>
    <PIN pinname="Position Out" visible="1">
    </PIN>
-   <PIN pinname="Position In" slicecount="1" values="1.45" visible="1">
+   <PIN pinname="Position In" slicecount="1" visible="1" values="1.45">
    </PIN>
    </NODE>
    <LINK srcnodeid="38" srcpinname="Mesh" dstnodeid="35" dstpinname="Mesh">
@@ -486,8 +488,6 @@
    </NODE>
    <LINK srcnodeid="50" srcpinname="EX9 Out" dstnodeid="51" dstpinname="Source">
    </LINK>
-   <LINK srcnodeid="8" srcpinname="Layer" dstnodeid="14" dstpinname="Layer 2">
-   </LINK>
    <NODE systemname="Scale (Transform Vector)" nodename="Scale (Transform Vector)" componentmode="Hidden" id="54">
    <BOUNDS type="Node" left="7170" top="1875" width="100" height="100">
    </BOUNDS>
@@ -517,24 +517,6 @@
    <LINK srcnodeid="55" srcpinname="Y Output Value" dstnodeid="50" dstpinname="Backbuffer Width">
    </LINK>
    <LINK srcnodeid="55" srcpinname="Y Output Value" dstnodeid="50" dstpinname="Backbuffer Height">
-   </LINK>
-   <NODE systemname="Colorize (EX9.Texture Filter)" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\Filter\Colorize\Colorize (EX9.Texture Filter).v4p" nodename="Colorize (EX9.Texture Filter)" componentmode="Hidden" id="56">
-   <BOUNDS type="Node" left="3660" top="1470" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="ColorA" slicecount="1" values="|0.11709,0.00000,0.41618,0.00000|" visible="1">
-   </PIN>
-   <PIN pinname="ColorC" visible="1" slicecount="1" values="|0.60299,0.55889,0.00000,1.00000|">
-   </PIN>
-   <PIN pinname="ColorB" slicecount="1" visible="1" values="|0.00000,0.84153,0.01223,0.00000|">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="51" srcpinname="Texture Out" dstnodeid="56" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="56" srcpinname="Output" dstnodeid="8" dstpinname="Texture">
    </LINK>
    <NODE id="58" systemname="Camera (Transform Softimage)" filename="%VVVV%\lib\nodes\modules\Transform\Camera (Transform Softimage).v4p" nodename="Camera (Transform Softimage)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
    <BOUNDS type="Node" left="3600" top="6435" width="1650" height="270">
@@ -615,9 +597,9 @@
    </PIN>
    <PIN pinname="Y" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Z" slicecount="1" values="45.3152136405445" visible="1">
+   <PIN pinname="Z" slicecount="1" visible="1" values="45.3152136405445">
    </PIN>
-   <PIN pinname="X" slicecount="1" values="-0.18" visible="1">
+   <PIN pinname="X" slicecount="1" visible="1" values="-0.18">
    </PIN>
    <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
    </PIN>
@@ -632,8 +614,6 @@
    <PIN pinname="Color Input" slicecount="1" visible="1" values="|1.00000,0.00000,0.68369,0.00000|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="71" srcpinname="Color Output" dstnodeid="56" dstpinname="ColorB">
-   </LINK>
    <NODE systemname="Add (Value)" nodename="Add (Value)" componentmode="Hidden" id="72">
    <BOUNDS type="Node" left="10230" top="480" width="100" height="100">
    </BOUNDS>
@@ -715,8 +695,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="80" srcpinname="Color Output" dstnodeid="79" dstpinname="Input2">
-   </LINK>
-   <LINK srcnodeid="79" srcpinname="Mix" dstnodeid="56" dstpinname="ColorC">
    </LINK>
    <LINK srcnodeid="79" srcpinname="Mix" dstnodeid="0" dstpinname="Black">
    </LINK>
@@ -838,8 +816,6 @@
    <PIN pinname="Color Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="96" srcpinname="Mix" dstnodeid="56" dstpinname="ColorA">
-   </LINK>
    <LINK srcnodeid="97" srcpinname="Color Output" dstnodeid="96" dstpinname="Input1">
    </LINK>
    <LINK srcnodeid="98" srcpinname="Color Output" dstnodeid="96" dstpinname="Input2">
@@ -861,5 +837,79 @@
    <LINK srcnodeid="94" srcpinname="Position Out" dstnodeid="99" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="99" srcpinname="Output" dstnodeid="65" dstpinname="Z">
+   </LINK>
+   <NODE systemname="Colorize (EX9.Texture Filter)" filename="..\..\..\..\Users\shapil\Downloads\vvvv\vvvv_45beta34.2_x86\addonpack\lib\nodes\modules\TextureFX\Filter\Colorize\Colorize (EX9.Texture Filter).v4p" nodename="Colorize (EX9.Texture Filter)" componentmode="Hidden" id="56">
+   <BOUNDS type="Node" left="3660" top="1470" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="ColorA" slicecount="1" visible="1" values="|0.11709,0.00000,0.41618,0.00000|">
+   </PIN>
+   <PIN pinname="ColorC" visible="1" slicecount="1" values="|0.60299,0.55889,0.00000,1.00000|">
+   </PIN>
+   <PIN pinname="ColorB" slicecount="1" visible="1" values="|0.00000,0.84153,0.01223,0.00000|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="51" srcpinname="Texture Out" dstnodeid="56" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="56" srcpinname="Output" dstnodeid="8" dstpinname="Texture">
+   </LINK>
+   <LINK srcnodeid="71" srcpinname="Color Output" dstnodeid="56" dstpinname="ColorB">
+   </LINK>
+   <LINK srcnodeid="79" srcpinname="Mix" dstnodeid="56" dstpinname="ColorC">
+   </LINK>
+   <LINK srcnodeid="96" srcpinname="Mix" dstnodeid="56" dstpinname="ColorA">
+   </LINK>
+   <LINK srcnodeid="8" srcpinname="Layer" dstnodeid="14" dstpinname="Layer 2">
+   </LINK>
+   <NODE systemname="Scale (Transform)" nodename="Scale (Transform)" componentmode="Hidden" id="102">
+   <BOUNDS type="Node" left="4485" top="2430" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Y" slicecount="1" visible="1" values="0.31">
+   </PIN>
+   <PIN pinname="X" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Z" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="102" srcpinname="Transform Out" dstnodeid="8" dstpinname="Texture Transform">
+   </LINK>
+   <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="103">
+   <BOUNDS type="Node" left="3570" top="2010" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" slicecount="1" values="0.31">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Damper (Animation)" nodename="Damper (Animation)" componentmode="Hidden" id="104">
+   <BOUNDS type="Node" left="4200" top="1980" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Position Out" visible="1">
+   </PIN>
+   <PIN pinname="Go To Position" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="FilterTime" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Cyclic" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="103" srcpinname="Output" dstnodeid="104" dstpinname="Go To Position">
+   </LINK>
+   <LINK srcnodeid="88" srcpinname="Y Output Value" dstnodeid="104" dstpinname="FilterTime">
+   </LINK>
+   <LINK srcnodeid="104" srcpinname="Position Out" dstnodeid="102" dstpinname="Y">
+   </LINK>
+   <LINK srcnodeid="46" srcpinname="Y Output Value" dstnodeid="103" dstpinname="Switch">
    </LINK>
    </PATCH>
