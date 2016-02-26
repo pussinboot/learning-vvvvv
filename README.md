@@ -25,3 +25,7 @@
 | P_2_2_1_01 Stupid Agent | P_2_2_5_01 Density structure of Agents |
 | :---: | :---: |
 | <a href="https://github.com/pussinboot/learning-vvvvv/tree/master/parasitic_redesign/P_2_2_1_01%20Stupid%20Agent"><img src="./previews/parasitic_redesign/P_2_2_1_01.gif" height="200px"></a> | <a href="https://github.com/pussinboot/learning-vvvvv/tree/master/parasitic_redesign/P_2_2_5_01%20Density%20structure%20of%20Agents"><img src="./previews/parasitic_redesign/P_2_2_5_01.png" height="200px"></a> |
+
+| P_2_3_4_01 Drawing with elastic Brush |
+| :---: |
+| <a href="https://github.com/pussinboot/learning-vvvvv/tree/master/parasitic_redesign/P_2_3_4_01%20Drawing%20with%20elastic%20Brush"><img src="./previews/parasitic_redesign/P_2_3_4_01.png" height="200px"></a> |
