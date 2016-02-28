@@ -1,0 +1,157 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta29.2.dtd" >
+   <PATCH nodename="C:\Users\MISAK\Dropbox\Contributions\MISAK\Fire\FireTorch.v4p" systemname="TorchFire" filename="C:\Users\MISAK\Dropbox\Contributions\MISAK\Fire\TorchFire.v4p">
+   <BOUNDS type="Window" left="9105" top="8850" width="8790" height="7425">
+   </BOUNDS>
+   <NODE systemname="FileTexture (EX9.Texture)" nodename="FileTexture (EX9.Texture)" componentmode="Hidden" id="4">
+   <BOUNDS type="Node" left="2580" top="2910" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Filename" slicecount="1" encoded="0" values="FireTextures\FireBase.tga">
+   </PIN>
+   </NODE>
+   <NODE systemname="FileTexture (EX9.Texture)" nodename="FileTexture (EX9.Texture)" componentmode="Hidden" id="5">
+   <BOUNDS type="Node" left="3435" top="3345" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Filename" slicecount="1" encoded="0" values="FireTextures\FireDistortion.tga">
+   </PIN>
+   </NODE>
+   <NODE systemname="FileTexture (EX9.Texture)" nodename="FileTexture (EX9.Texture)" componentmode="Hidden" id="6">
+   <BOUNDS type="Node" left="3825" top="3840" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Filename" slicecount="1" encoded="0" values="FireTextures\FireOpacity.tga">
+   </PIN>
+   </NODE>
+   <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="InAWindow" id="7">
+   <BOUNDS type="Node" left="510" top="5460" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="510" top="5460" width="2400" height="1800">
+   </BOUNDS>
+   <BOUNDS type="Window" left="17985" top="8865" width="8130" height="7440">
+   </BOUNDS>
+   <PIN pinname="Layers" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE systemname="Grid (EX9.Geometry)" nodename="Grid (EX9.Geometry)" componentmode="Hidden" id="8">
+   <BOUNDS type="Node" left="945" top="4005" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Mesh" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Integrate (Differential)" nodename="Integrate (Differential)" componentmode="Hidden" id="9">
+   <BOUNDS type="Node" left="2175" top="2115" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Position Out" visible="1">
+   </PIN>
+   <PIN pinname="Position In" slicecount="1" values="0.51">
+   </PIN>
+   </NODE>
+   <NODE systemname="Scale (Transform Vector)" nodename="Scale (Transform Vector)" componentmode="Hidden" id="24">
+   <BOUNDS type="Node" left="1350" top="3360" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="XYZ" slicecount="3" values="2,2,2">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="FireTorch (EX9.Effect)" filename="effects\FireTorch.fx" nodename="FireTorch (EX9.Effect)" componentmode="Hidden" id="3">
+   <BOUNDS type="Node" left="525" top="4500" width="6285" height="270">
+   </BOUNDS>
+   <PIN pinname="Fire Base" visible="1">
+   </PIN>
+   <PIN pinname="Fire Distortion" visible="1">
+   </PIN>
+   <PIN pinname="Fire Opacity" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Mesh" visible="1">
+   </PIN>
+   <PIN pinname="time 0 X" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Texture Transform" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="distortion amount0" slicecount="1" values="0.123">
+   </PIN>
+   <PIN pinname="distortion amount1" slicecount="1" values="0.111">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="4" srcpinname="Texture Out" dstnodeid="3" dstpinname="Fire Base">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="Texture Out" dstnodeid="3" dstpinname="Fire Distortion">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Texture Out" dstnodeid="3" dstpinname="Fire Opacity">
+   </LINK>
+   <LINK srcnodeid="8" srcpinname="Mesh" dstnodeid="3" dstpinname="Mesh">
+   </LINK>
+   <LINK srcnodeid="9" srcpinname="Position Out" dstnodeid="3" dstpinname="time 0 X">
+   </LINK>
+   <LINK srcnodeid="3" srcpinname="Layer" dstnodeid="7" dstpinname="Layers">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="25" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="15" top="0" width="840" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="15" top="0" width="2205" height="600">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="FireTorch">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="21">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="28" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="75" top="510" type="Node" width="1500">
+   </BOUNDS>
+   <BOUNDS height="270" left="75" top="510" type="Box" width="2070">
+   </BOUNDS>
+   <BOUNDS height="160" left="0" top="0" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|from AMD RenderMonkey|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="27" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="1260" top="825" type="Node" width="1500">
+   </BOUNDS>
+   <BOUNDS height="285" left="1260" top="825" type="Box" width="900">
+   </BOUNDS>
+   <BOUNDS height="160" left="0" top="0" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|by misak|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="26" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="270" left="705" top="825" type="Node" width="1500">
+   </BOUNDS>
+   <BOUNDS height="285" left="705" top="825" type="Box" width="495">
+   </BOUNDS>
+   <BOUNDS height="160" left="0" top="0" type="Window" width="215">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="0" values="2012">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="24" srcpinname="Transform Out" dstnodeid="3" dstpinname="Transform">
+   </LINK>
+   </PATCH>
