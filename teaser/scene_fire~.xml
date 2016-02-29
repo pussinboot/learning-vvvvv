@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Code\vvvv\learning-vvvvv\teaser\scene_fire.v4p" systemname="scene_fire" filename="C:\Code\vvvv\learning-vvvvv\teaser\scene_fire.v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="4575" top="5010" width="12165" height="9750">
+   <PATCH nodename="C:\Users\Leo\Documents\GitHub\learning-vvvvv\teaser\scene_fire.v4p" systemname="scene_fire" filename="C:\Code\vvvv\learning-vvvvv\teaser\scene_fire.v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="5175" top="3990" width="12165" height="9750">
    </BOUNDS>
    <NODE componentmode="Hidden" filename="%VVVV%\lib\nodes\effects\Chess.fx" id="0" nodename="Chess (EX9.Effect)" systemname="Chess (EX9.Effect)">
    <BOUNDS height="100" left="1515" top="2355" type="Node" width="100">
@@ -297,7 +297,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="2460" top="6780" width="2400" height="1800">
    </BOUNDS>
-   <BOUNDS type="Window" left="17340" top="9930" width="9720" height="7560">
+   <BOUNDS type="Window" left="17415" top="4920" width="9720" height="7560">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -318,36 +318,6 @@
    <PIN pinname="Z" slicecount="1" visible="1" values="1.58">
    </PIN>
    <PIN pinname="X" slicecount="1" values="0.01">
-   </PIN>
-   </NODE>
-   <NODE systemname="FireTorch (EX9.Effect)" filename="..\..\..\..\Users\shapil\Downloads\vvvv\packs\Fire\effects\FireTorch.fx" nodename="FireTorch (EX9.Effect)" componentmode="Hidden" id="35">
-   <BOUNDS type="Node" left="7620" top="2940" width="6285" height="270">
-   </BOUNDS>
-   <PIN pinname="Fire Base" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Fire Distortion" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Fire Opacity" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="Mesh" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="time 0 X" visible="1" slicecount="1" values="5.98">
-   </PIN>
-   <PIN pinname="Transform" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Texture Transform" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="distortion amount0" slicecount="1" visible="1" values="0.13">
-   </PIN>
-   <PIN pinname="distortion amount1" slicecount="1" visible="1" values="0.64">
-   </PIN>
-   <PIN pinname="distortion amount2" slicecount="1" visible="1" values="0.27">
-   </PIN>
-   <PIN pinname="height attenuation " visible="1">
-   </PIN>
-   <PIN pinname="layer speed " visible="1">
    </PIN>
    </NODE>
    <NODE systemname="FileTexture (EX9.Texture)" nodename="FileTexture (EX9.Texture)" componentmode="Hidden" id="41">
@@ -372,12 +342,6 @@
    <PIN pinname="Position In" slicecount="1" visible="1" values="1.45">
    </PIN>
    </NODE>
-   <LINK srcnodeid="38" srcpinname="Mesh" dstnodeid="35" dstpinname="Mesh">
-   </LINK>
-   <LINK srcnodeid="37" srcpinname="Position Out" dstnodeid="35" dstpinname="time 0 X">
-   </LINK>
-   <LINK srcnodeid="41" srcpinname="Texture Out" dstnodeid="35" dstpinname="Fire Base">
-   </LINK>
    <NODE componentmode="Hidden" id="45" nodename="Translate (Transform)" systemname="Translate (Transform)">
    <BOUNDS height="100" left="3315" top="4035" type="Node" width="100">
    </BOUNDS>
@@ -430,8 +394,6 @@
    <PIN pinname="X Input Value" slicecount="4" values="0.439999997615814,0.28999999165535,0,1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="47" srcpinname="Y Output Value" dstnodeid="35" dstpinname="height attenuation ">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="48" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="8340" top="1425" width="795" height="960">
    </BOUNDS>
@@ -448,8 +410,6 @@
    <PIN pinname="Rows" slicecount="1" values="4">
    </PIN>
    </NODE>
-   <LINK srcnodeid="48" srcpinname="Y Output Value" dstnodeid="35" dstpinname="layer speed ">
-   </LINK>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="49">
    <BOUNDS type="Node" left="13005" top="1830" width="100" height="100">
    </BOUNDS>
@@ -465,7 +425,7 @@
    </BOUNDS>
    <BOUNDS type="Window" left="19125" top="7155" width="6120" height="4860">
    </BOUNDS>
-   <PIN pinname="Layers" visible="1">
+   <PIN pinname="Layers" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="EX9 Out" visible="1">
    </PIN>
@@ -476,8 +436,6 @@
    <PIN pinname="Background Color" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="35" srcpinname="Layer" dstnodeid="50" dstpinname="Layers">
-   </LINK>
    <NODE systemname="DX9Texture (EX9.Texture)" nodename="DX9Texture (EX9.Texture)" componentmode="Hidden" id="51">
    <BOUNDS type="Node" left="7050" top="1215" width="100" height="100">
    </BOUNDS>
@@ -496,8 +454,6 @@
    <PIN pinname="XYZ" slicecount="3" values="2,2,2">
    </PIN>
    </NODE>
-   <LINK srcnodeid="54" srcpinname="Transform Out" dstnodeid="35" dstpinname="Transform">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="55" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="8565" top="3315" width="795" height="240">
    </BOUNDS>
@@ -563,7 +519,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3180" top="210" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.00000,0.67435,0.73642,1.00000|">
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.00000,0.51629,0.72137,1.00000|">
    </PIN>
    <PIN pinname="Color Output" visible="1">
    </PIN>
@@ -576,8 +532,6 @@
    <PIN pinname="Filename" slicecount="1" encoded="0" values="FireTextures\FireDistortion.tga">
    </PIN>
    </NODE>
-   <LINK srcnodeid="63" srcpinname="Texture Out" dstnodeid="35" dstpinname="Fire Distortion">
-   </LINK>
    <NODE systemname="FileTexture (EX9.Texture)" nodename="FileTexture (EX9.Texture)" componentmode="Hidden" id="64">
    <BOUNDS type="Node" left="10425" top="2025" width="100" height="100">
    </BOUNDS>
@@ -586,8 +540,6 @@
    <PIN pinname="Filename" slicecount="1" encoded="0" values="FireTextures\FireOpacity.tga">
    </PIN>
    </NODE>
-   <LINK srcnodeid="64" srcpinname="Texture Out" dstnodeid="35" dstpinname="Fire Opacity">
-   </LINK>
    <LINK srcnodeid="2" srcpinname="Mesh" dstnodeid="0" dstpinname="Mesh">
    </LINK>
    <NODE componentmode="Hidden" id="65" nodename="Rotate (Transform)" systemname="Rotate (Transform)">
@@ -669,8 +621,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="75" srcpinname="Y Output Value" dstnodeid="76" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="76" srcpinname="Output" dstnodeid="35" dstpinname="distortion amount0">
    </LINK>
    <NODE systemname="Blend (Color)" nodename="Blend (Color)" componentmode="Hidden" id="79">
    <BOUNDS type="Node" left="3450" top="930" width="100" height="100">
@@ -911,5 +861,55 @@
    <LINK srcnodeid="104" srcpinname="Position Out" dstnodeid="102" dstpinname="Y">
    </LINK>
    <LINK srcnodeid="46" srcpinname="Y Output Value" dstnodeid="103" dstpinname="Switch">
+   </LINK>
+   <NODE systemname="FireTorch (EX9.Effect)" filename="effects\FireTorch.fx" nodename="FireTorch (EX9.Effect)" componentmode="Hidden" id="35">
+   <BOUNDS type="Node" left="7620" top="2940" width="6285" height="270">
+   </BOUNDS>
+   <PIN pinname="Fire Base" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Fire Distortion" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Fire Opacity" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Mesh" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="time 0 X" visible="1" slicecount="1" values="5.98">
+   </PIN>
+   <PIN pinname="Transform" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Texture Transform" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="distortion amount0" slicecount="1" visible="1" values="0.13">
+   </PIN>
+   <PIN pinname="distortion amount1" slicecount="1" visible="1" values="0.64">
+   </PIN>
+   <PIN pinname="distortion amount2" slicecount="1" visible="1" values="0.27">
+   </PIN>
+   <PIN pinname="height attenuation " visible="1">
+   </PIN>
+   <PIN pinname="layer speed " visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="38" srcpinname="Mesh" dstnodeid="35" dstpinname="Mesh">
+   </LINK>
+   <LINK srcnodeid="37" srcpinname="Position Out" dstnodeid="35" dstpinname="time 0 X">
+   </LINK>
+   <LINK srcnodeid="41" srcpinname="Texture Out" dstnodeid="35" dstpinname="Fire Base">
+   </LINK>
+   <LINK srcnodeid="47" srcpinname="Y Output Value" dstnodeid="35" dstpinname="height attenuation ">
+   </LINK>
+   <LINK srcnodeid="48" srcpinname="Y Output Value" dstnodeid="35" dstpinname="layer speed ">
+   </LINK>
+   <LINK srcnodeid="35" srcpinname="Layer" dstnodeid="50" dstpinname="Layers">
+   </LINK>
+   <LINK srcnodeid="54" srcpinname="Transform Out" dstnodeid="35" dstpinname="Transform">
+   </LINK>
+   <LINK srcnodeid="63" srcpinname="Texture Out" dstnodeid="35" dstpinname="Fire Distortion">
+   </LINK>
+   <LINK srcnodeid="64" srcpinname="Texture Out" dstnodeid="35" dstpinname="Fire Opacity">
+   </LINK>
+   <LINK srcnodeid="76" srcpinname="Output" dstnodeid="35" dstpinname="distortion amount0">
    </LINK>
    </PATCH>
