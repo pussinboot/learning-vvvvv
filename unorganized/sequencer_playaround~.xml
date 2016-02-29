@@ -99,6 +99,10 @@
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
+   <PIN pinname="Backbuffer Height" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Backbuffer Width" slicecount="1" values="0">
+   </PIN>
    </NODE>
    <NODE systemname="Text (EX9)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Text (EX9)" componentmode="Hidden" id="6">
    <BOUNDS type="Node" left="5580" top="2925" width="100" height="100">
@@ -117,9 +121,9 @@
    </PIN>
    <PIN pinname="Size" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Bold" slicecount="1" values="1">
+   <PIN pinname="Bold" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Italic" slicecount="1" values="0">
+   <PIN pinname="Italic" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Font" slicecount="1" values="|Arial CYR|">
    </PIN>
@@ -169,7 +173,7 @@
    </PIN>
    <PIN pinname="Show Slider" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" values="0.525641025641024">
+   <PIN pinname="Y Input Value" slicecount="1" values="0.370085470085468">
    </PIN>
    <PIN pinname="X Input Value" slicecount="1" values="0.5">
    </PIN>
