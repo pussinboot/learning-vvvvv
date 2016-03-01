@@ -1,0 +1,147 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
+   <PATCH nodename="C:\Code\vvvv\learning-vvvvv\unorganized\funny_3d_splines.v4p" scrollx="0" scrolly="360" systemname="funny_3d_splines" filename="C:\Code\vvvv\learning-vvvvv\unorganized\funny_3d_splines.v4p">
+   <BOUNDS type="Window" left="9900" top="6000" width="9000" height="6000">
+   </BOUNDS>
+   <NODE systemname="B-Spline (3d)" filename="%VVVV%\lib\nodes\modules\3D\B-Spline (3D).v4p" nodename="B-Spline (3d)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="1560" top="1605" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Topology" slicecount="1" values="Closed">
+   </PIN>
+   <PIN pinname="Ouput XYZ" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Degree" slicecount="1" values="3">
+   </PIN>
+   </NODE>
+   <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="InAWindow" id="2">
+   <BOUNDS type="Node" left="3465" top="4215" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3465" top="4215" width="2400" height="1800">
+   </BOUNDS>
+   <BOUNDS type="Window" left="19395" top="9975" width="6120" height="4860">
+   </BOUNDS>
+   <PIN pinname="Layers" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Projection" visible="1">
+   </PIN>
+   <PIN pinname="View" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE id="3" nodename="Vertigo (Transform)" systemname="Vertigo (Transform)">
+   <BOUNDS height="0" left="4350" top="1710" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Dolly &amp; Size" slicecount="1" values="4.35">
+   </PIN>
+   <PIN pinname="Depth" slicecount="1" values="100">
+   </PIN>
+   <PIN pinname="FOV" slicecount="1" values="0.27">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="3" srcpinname="Transform Out" dstnodeid="2" dstpinname="Projection">
+   </LINK>
+   <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="5">
+   <BOUNDS type="Node" left="2715" top="3855" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="7" nodename="Sphere (DX9)" systemname="Sphere (DX9)">
+   <BOUNDS height="0" left="915" top="3315" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Transform" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Resolution X" slicecount="1" values="30">
+   </PIN>
+   <PIN pinname="Resolution Y" slicecount="1" values="30">
+   </PIN>
+   </NODE>
+   <NODE id="9" nodename="UniformScale (Transform)" systemname="UniformScale (Transform)">
+   <BOUNDS height="0" left="885" top="2730" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="XYZ" slicecount="1" values="0.43">
+   </PIN>
+   <PIN pinname="Transform In" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="8" nodename="Translate (Transform Vector)" systemname="Translate (Transform Vector)">
+   <BOUNDS height="0" left="1140" top="2145" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Transform In" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Z">
+   </PIN>
+   <PIN pinname="Y">
+   </PIN>
+   <PIN pinname="XYZ" visible="1" slicecount="3" values="0,0,0">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="9" dstpinname="Transform In" srcnodeid="8" srcpinname="Transform Out">
+   </LINK>
+   <LINK srcnodeid="9" srcpinname="Transform Out" dstnodeid="7" dstpinname="Transform">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Ouput XYZ" dstnodeid="8" dstpinname="XYZ">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Layer" dstnodeid="5" dstpinname="Layer 1">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Layer" dstnodeid="5" dstpinname="Layer 2">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="Layer" dstnodeid="2" dstpinname="Layers">
+   </LINK>
+   <NODE systemname="Translate (Transform)" nodename="Translate (Transform)" componentmode="Hidden" id="12">
+   <BOUNDS type="Node" left="4170" top="3465" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="X" slicecount="1" values="-0.94">
+   </PIN>
+   <PIN pinname="Z" slicecount="1" values="2.4">
+   </PIN>
+   <PIN pinname="Y" slicecount="1" values="0.04">
+   </PIN>
+   </NODE>
+   <NODE systemname="LFO (Animation)" nodename="LFO (Animation)" componentmode="Hidden" id="13">
+   <BOUNDS type="Node" left="1260" top="870" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Period" slicecount="1" values="1.68">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="13" srcpinname="Output" dstnodeid="1" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Rotate (Transform Vector)" nodename="Rotate (Transform Vector)" componentmode="Hidden" id="15">
+   <BOUNDS type="Node" left="6060" top="3045" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform In" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="12" srcpinname="Transform Out" dstnodeid="15" dstpinname="Transform In">
+   </LINK>
+   <LINK srcnodeid="15" srcpinname="Transform Out" dstnodeid="2" dstpinname="View">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Ouput XYZ" dstnodeid="15" dstpinname="XYZ">
+   </LINK>
+   <PACK Name="addonpack" Version="34.1.0">
+   </PACK>
+   </PATCH>
