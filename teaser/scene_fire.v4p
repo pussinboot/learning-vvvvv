@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Code\vvvv\learning-vvvvv\teaser\scene_fire.v4p" systemname="scene_fire" filename="C:\Code\vvvv\learning-vvvvv\teaser\scene_fire.v4p" scrollx="600" scrolly="0">
-   <BOUNDS type="Window" left="2565" top="6510" width="12165" height="9750">
+   <PATCH nodename="C:\Users\Leo\Documents\GitHub\learning-vvvvv\teaser\scene_fire.v4p" systemname="scene_fire" filename="C:\Code\vvvv\learning-vvvvv\teaser\scene_fire.v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="0" top="765" width="19650" height="9945">
    </BOUNDS>
    <NODE componentmode="Hidden" filename="%VVVV%\lib\nodes\effects\Chess.fx" id="0" nodename="Chess (EX9.Effect)" systemname="Chess (EX9.Effect)">
    <BOUNDS height="100" left="525" top="2865" type="Node" width="100">
@@ -17,7 +17,7 @@
    </PIN>
    <PIN pinname="Vertical" slicecount="1" values="8">
    </PIN>
-   <PIN pinname="Enabled" slicecount="1" values="1">
+   <PIN pinname="Enabled" slicecount="1" values="0" visible="1">
    </PIN>
    <PIN pinname="Technique Pass" slicecount="1" values="-1">
    </PIN>
@@ -225,7 +225,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="3090" top="8715" width="2400" height="1800">
    </BOUNDS>
-   <BOUNDS type="Window" left="11070" top="7980" width="9720" height="7560">
+   <BOUNDS type="Window" left="30900" top="3450" width="9720" height="7560">
    </BOUNDS>
    <PIN pinname="Layers" visible="1" slicecount="1" values="||">
    </PIN>
@@ -275,7 +275,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="4215" top="540" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -285,7 +285,7 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
+   <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -347,7 +347,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="13845" top="5610" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="32">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="256">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="px">
    </PIN>
@@ -651,7 +651,7 @@
    </PIN>
    <PIN pinname="ColorB" slicecount="1" visible="1" values="|0.00000,0.84153,0.01223,0.00000|">
    </PIN>
-   <PIN pinname="Enabled" slicecount="1" values="1">
+   <PIN pinname="Enabled" slicecount="1" values="1" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="56" srcpinname="Output" dstnodeid="8" dstpinname="Texture">
@@ -741,7 +741,7 @@
    </PIN>
    <PIN pinname="layer speed " visible="1">
    </PIN>
-   <PIN pinname="Enabled" slicecount="1" values="1">
+   <PIN pinname="Enabled" slicecount="1" values="1" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="38" srcpinname="Mesh" dstnodeid="35" dstpinname="Mesh">
@@ -761,7 +761,7 @@
    <LINK srcnodeid="64" srcpinname="Texture Out" dstnodeid="35" dstpinname="Fire Opacity">
    </LINK>
    <NODE systemname="FileStream (Bass)" filename="%VVVV%\addonpack\lib\nodes\plugins\BassSound.dll" nodename="FileStream (Bass)" componentmode="Hidden" id="116">
-   <BOUNDS type="Node" left="11010" top="1470" width="100" height="100">
+   <BOUNDS type="Node" left="11205" top="1815" width="100" height="100">
    </BOUNDS>
    <PIN pinname="File Name" slicecount="1" values="intro.wav">
    </PIN>
@@ -772,6 +772,8 @@
    <PIN pinname="Do Seek" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Current Position" visible="1">
+   </PIN>
+   <PIN pinname="Seek Time" visible="1">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="115" systemname="IOBox (Value Advanced)">
@@ -859,9 +861,9 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <BOUNDS type="Box" left="10725" top="585" width="450" height="495">
+   <BOUNDS type="Box" left="9600" top="360" width="450" height="495">
    </BOUNDS>
-   <BOUNDS type="Node" left="10725" top="585" width="0" height="0">
+   <BOUNDS type="Node" left="9600" top="360" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -889,13 +891,17 @@
    <LINK srcnodeid="110" srcpinname="Y Output Value" dstnodeid="109" dstpinname="Input">
    </LINK>
    <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="108">
-   <BOUNDS type="Node" left="11865" top="1125" width="100" height="100">
+   <BOUNDS type="Node" left="11850" top="1335" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
    <PIN pinname="Input 1" visible="1">
    </PIN>
    <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Input 3" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="108" srcpinname="Output" dstnodeid="116" dstpinname="Do Seek">
@@ -1361,6 +1367,8 @@
    </PIN>
    <PIN pinname="play" slicecount="1" values="1">
    </PIN>
+   <BOUNDS type="Window" left="19800" top="840" width="9000" height="6000">
+   </BOUNDS>
    </NODE>
    <LINK srcnodeid="50" srcpinname="EX9 Out" dstnodeid="51" dstpinname="Source">
    </LINK>
@@ -1375,15 +1383,15 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Opacity" slicecount="1" values="1">
+   <PIN pinname="Opacity" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Mode" slicecount="1" visible="1" values="| Difference|">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="174" systemname="IOBox (Enumerations)">
-   <BOUNDS type="Box" left="10635" top="3615" width="1590" height="270">
+   <BOUNDS type="Box" left="9570" top="3660" width="825" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="10635" top="3615" width="0" height="0">
+   <BOUNDS type="Node" left="9570" top="3660" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input Enum" slicecount="1" visible="1" values="| Add|">
    </PIN>
@@ -1395,5 +1403,169 @@
    <LINK srcnodeid="51" srcpinname="Texture Out" dstnodeid="175" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="175" srcpinname="Output" dstnodeid="56" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Timeliner (Animation)" filename="%VVVV%\lib\nodes\plugins\Timeliner.dll" nodename="Timeliner (Animation)" componentmode="InAWindow" id="176">
+   <BOUNDS type="Node" left="9030" top="7155" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="9030" top="7155" width="8985" height="4020">
+   </BOUNDS>
+   <BOUNDS type="Window" left="19350" top="3720" width="9120" height="13155">
+   </BOUNDS>
+   <PIN pinname="Translate" slicecount="1" values="-29.8771">
+   </PIN>
+   <PIN pinname="Scale" slicecount="1" values="65.1599">
+   </PIN>
+   <PIN pinname="Pin Settings" slicecount="7" values="|&lt;PIN Name=&quot;Ruler0&quot; Type=&quot;Ruler&quot; SliceCount=&quot;0&quot; Height=&quot;40&quot; Parent=&quot;0&quot; /&gt;|,|&lt;PIN Name=&quot;colorize&quot; Type=&quot;Value&quot; SliceCount=&quot;1&quot; Height=&quot;110&quot; Parent=&quot;1&quot; AllInOne=&quot;False&quot; Collapsed=&quot;False&quot; InterpolationIn=&quot;Step&quot; Minimum=&quot;0.0000&quot; Maximum=&quot;1.0000&quot; /&gt;|,|&lt;PIN Name=&quot;fire_on&quot; Type=&quot;Value&quot; SliceCount=&quot;1&quot; Height=&quot;150&quot; Parent=&quot;1&quot; AllInOne=&quot;False&quot; Collapsed=&quot;False&quot; InterpolationIn=&quot;Step&quot; Minimum=&quot;0.0000&quot; Maximum=&quot;1.0000&quot; /&gt;|,|&lt;PIN Name=&quot;backbuffer&quot; Type=&quot;Value&quot; SliceCount=&quot;1&quot; Height=&quot;150&quot; Parent=&quot;1&quot; AllInOne=&quot;False&quot; Collapsed=&quot;False&quot; InterpolationIn=&quot;Step&quot; Minimum=&quot;0.0000&quot; Maximum=&quot;256.0000&quot; /&gt;|,|&lt;PIN Name=&quot;floor&quot; Type=&quot;Value&quot; SliceCount=&quot;1&quot; Height=&quot;110&quot; Parent=&quot;1&quot; AllInOne=&quot;False&quot; Collapsed=&quot;False&quot; InterpolationIn=&quot;Step&quot; Minimum=&quot;-1.0000&quot; Maximum=&quot;1.0000&quot; /&gt;|,|&lt;PIN Name=&quot;floor_color&quot; Type=&quot;Value&quot; SliceCount=&quot;1&quot; Height=&quot;150&quot; Parent=&quot;1&quot; AllInOne=&quot;False&quot; Collapsed=&quot;False&quot; InterpolationIn=&quot;Step&quot; Minimum=&quot;0.0000&quot; Maximum=&quot;1.0000&quot; /&gt;|,|&lt;PIN Name=&quot;do_it&quot; Type=&quot;Value&quot; SliceCount=&quot;1&quot; Height=&quot;150&quot; Parent=&quot;1&quot; AllInOne=&quot;False&quot; Collapsed=&quot;False&quot; InterpolationIn=&quot;Step&quot; Minimum=&quot;0.0000&quot; Maximum=&quot;1.0000&quot; /&gt;|">
+   </PIN>
+   <PIN pinname="Time In" visible="1" slicecount="1" values="15.7526984126984">
+   </PIN>
+   <PIN pinname="Play" visible="1">
+   </PIN>
+   <PIN pinname="Set Time" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="GUI Settings" slicecount="1" values="|&lt;GUI&gt;&lt;SPLITTER Position=&quot;21&quot; /&gt;&lt;TIMEBAR Mode=&quot;Follow&quot; /&gt;&lt;/GUI&gt;|">
+   </PIN>
+   <PIN pinname="String0-Time0">
+   </PIN>
+   <PIN pinname="String0-FlagY0">
+   </PIN>
+   <PIN pinname="String0-Value0">
+   </PIN>
+   <PIN pinname="colorize" visible="1">
+   </PIN>
+   <PIN pinname="colorize-Time1" slicecount="1" values="0.959999876022337">
+   </PIN>
+   <PIN pinname="colorize-Value1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="colorize-InType1" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="colorize-OutType1">
+   </PIN>
+   <PIN pinname="colorize-Time0" slicecount="2" values="10.3389283584595,16.6499476132367">
+   </PIN>
+   <PIN pinname="colorize-Value0" slicecount="2" values="-1.82145964977565E-017,0.890909090909091">
+   </PIN>
+   <PIN pinname="colorize-InType0" slicecount="2" values="0,0">
+   </PIN>
+   <PIN pinname="colorize-OutType0" slicecount="2" values="0,0">
+   </PIN>
+   <PIN pinname="floor-Time0" slicecount="2" values="5.83028501845254,11.6141613562071">
+   </PIN>
+   <PIN pinname="floor-Value0" slicecount="2" values="0,1">
+   </PIN>
+   <PIN pinname="floor-InType0" slicecount="2" values="0,0">
+   </PIN>
+   <PIN pinname="floor-OutType0" slicecount="2" values="0,0">
+   </PIN>
+   <PIN pinname="floor" visible="1">
+   </PIN>
+   <PIN pinname="fire_on-Time0" slicecount="4" values="4.05595784460568,10.3399,10.34,16.624137878418">
+   </PIN>
+   <PIN pinname="fire_on-Value0" slicecount="4" values="256,1,0,256">
+   </PIN>
+   <PIN pinname="fire_on-InType0" slicecount="4" values="0,0,0,0">
+   </PIN>
+   <PIN pinname="fire_on-OutType0" slicecount="4" values="0,0,0,0">
+   </PIN>
+   <PIN pinname="fire_on" visible="1">
+   </PIN>
+   <PIN pinname="backbuffer-Time0" slicecount="2" values="14.3749656677246,15.1201096780502">
+   </PIN>
+   <PIN pinname="backbuffer-Value0" slicecount="2" values="0,32">
+   </PIN>
+   <PIN pinname="backbuffer-InType0" slicecount="2" values="0,2">
+   </PIN>
+   <PIN pinname="backbuffer-OutType0" slicecount="2" values="0,2">
+   </PIN>
+   <PIN pinname="floor_color" visible="1">
+   </PIN>
+   <PIN pinname="Time" visible="1">
+   </PIN>
+   <PIN pinname="backbuffer" visible="1">
+   </PIN>
+   <PIN pinname="do_it-Time0" slicecount="3" values="27.4446468353271,27.5610754504607,27.8637903862568">
+   </PIN>
+   <PIN pinname="do_it-Value0" slicecount="3" values="0,0,1">
+   </PIN>
+   <PIN pinname="do_it-InType0" slicecount="3" values="2,0,0">
+   </PIN>
+   <PIN pinname="do_it-OutType0" slicecount="3" values="2,0,0">
+   </PIN>
+   <PIN pinname="floor_color-Time1" slicecount="6" values="11.9293746948242,12.031252279183,12.2254120790512,14.7380685806274,15.0291404724121,16.5135192871094">
+   </PIN>
+   <PIN pinname="floor_color-Value1" slicecount="6" values="0,1,0,1,0,1">
+   </PIN>
+   <PIN pinname="floor_color-InType1" slicecount="6" values="0,0,0,0,0,0">
+   </PIN>
+   <PIN pinname="floor_color-OutType1">
+   </PIN>
+   <PIN pinname="do_it" visible="1">
+   </PIN>
+   <PIN pinname="floor_color-Time0" slicecount="6" values="11.8204781485893,11.9299206442659,12.1849756240845,14.4716572114804,14.9220762252808,16.385929107666">
+   </PIN>
+   <PIN pinname="floor_color-Value0" slicecount="6" values="0,0.726666666666667,0.306666657527288,0.519999989668528,0.433333361148834,0.653333330949148">
+   </PIN>
+   <PIN pinname="floor_color-InType0" slicecount="6" values="0,0,0,0,0,0">
+   </PIN>
+   <PIN pinname="floor_color-OutType0" slicecount="6" values="0,0,0,0,0,0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="115" srcpinname="Y Output Value" dstnodeid="176" dstpinname="Play">
+   </LINK>
+   <LINK srcnodeid="176" srcpinname="colorize" dstnodeid="56" dstpinname="Enabled">
+   </LINK>
+   <LINK srcnodeid="109" srcpinname="Up Edge" dstnodeid="176" dstpinname="Set Time">
+   </LINK>
+   <NODE systemname="Change (Animation)" nodename="Change (Animation)" componentmode="Hidden" id="177">
+   <BOUNDS type="Node" left="12510" top="1395" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="OnChange" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="177" srcpinname="OnChange" dstnodeid="108" dstpinname="Input 3">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="178" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="13080" top="150" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="13080" top="150" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="178" srcpinname="Y Output Value" dstnodeid="116" dstpinname="Seek Time">
+   </LINK>
+   <LINK srcnodeid="178" srcpinname="Y Output Value" dstnodeid="177" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="176" srcpinname="floor" dstnodeid="0" dstpinname="Enabled">
+   </LINK>
+   <LINK srcnodeid="176" srcpinname="fire_on" dstnodeid="35" dstpinname="Enabled">
+   </LINK>
+   <LINK srcnodeid="116" srcpinname="Current Position" dstnodeid="176" dstpinname="Time In">
+   </LINK>
+   <LINK srcnodeid="176" srcpinname="backbuffer" dstnodeid="55" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="179" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="9330" top="7995" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="9330" top="7995" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="176" srcpinname="Time" dstnodeid="179" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="176" srcpinname="floor_color" dstnodeid="149" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="176" srcpinname="do_it" dstnodeid="46" dstpinname="Y Input Value">
    </LINK>
    </PATCH>
