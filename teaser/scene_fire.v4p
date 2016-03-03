@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Code\vvvv\learning-vvvvv\teaser\scene_fire.v4p" systemname="scene_fire" filename="C:\Code\vvvv\learning-vvvvv\teaser\scene_fire.v4p" scrollx="0" scrolly="30">
+   <PATCH nodename="C:\Code\vvvv\learning-vvvvv\teaser\scene_fire.v4p" systemname="scene_fire" filename="C:\Code\vvvv\learning-vvvvv\teaser\scene_fire.v4p" scrollx="0" scrolly="-360">
    <BOUNDS type="Window" left="1365" top="2670" width="19650" height="9945">
    </BOUNDS>
    <NODE componentmode="Hidden" filename="%VVVV%\lib\nodes\effects\Chess.fx" id="0" nodename="Chess (EX9.Effect)" systemname="Chess (EX9.Effect)">
@@ -677,7 +677,7 @@
    </PIN>
    <PIN pinname="Y" slicecount="1" visible="1" values="1">
    </PIN>
-   <PIN pinname="X" slicecount="1" values="1" visible="1">
+   <PIN pinname="X" slicecount="1" visible="1" values="1">
    </PIN>
    <PIN pinname="Z" slicecount="1" values="1">
    </PIN>
@@ -699,7 +699,7 @@
    </PIN>
    <PIN pinname="Input Count" slicecount="1" values="3">
    </PIN>
-   <PIN pinname="Input 3" slicecount="1" values="-2.77">
+   <PIN pinname="Input 3" slicecount="1" values="-2.77" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="Damper (Animation)" nodename="Damper (Animation)" componentmode="Hidden" id="104">
@@ -1279,7 +1279,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="6135" top="585" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Counterclockwise">
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="(nil)">
    </PIN>
    </NODE>
    <LINK srcnodeid="150" srcpinname="Output Enum" dstnodeid="26" dstpinname="Culling">
@@ -1347,7 +1347,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="360" top="4320" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.54">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -1423,11 +1423,11 @@
    </BOUNDS>
    <BOUNDS type="Window" left="15585" top="2250" width="12735" height="10875">
    </BOUNDS>
-   <PIN pinname="Translate" slicecount="1" values="16.4406">
+   <PIN pinname="Translate" slicecount="1" values="-82.4657">
    </PIN>
-   <PIN pinname="Scale" slicecount="1" values="20.8">
+   <PIN pinname="Scale" slicecount="1" values="26.0647">
    </PIN>
-   <PIN pinname="Pin Settings" slicecount="16" values="|&lt;PIN Name=&quot;Ruler0&quot; Type=&quot;Ruler&quot; SliceCount=&quot;0&quot; Height=&quot;40&quot; Parent=&quot;0&quot; /&gt;|,|&lt;PIN Name=&quot;colorize&quot; Type=&quot;Value&quot; SliceCount=&quot;1&quot; Height=&quot;110&quot; Parent=&quot;1&quot; AllInOne=&quot;False&quot; Collapsed=&quot;False&quot; InterpolationIn=&quot;Step&quot; Minimum=&quot;0.0000&quot; Maximum=&quot;1.0000&quot; /&gt;|,|&lt;PIN Name=&quot;fire_on&quot; Type=&quot;Value&quot; SliceCount=&quot;1&quot; Height=&quot;150&quot; Parent=&quot;1&quot; AllInOne=&quot;False&quot; Collapsed=&quot;True&quot; InterpolationIn=&quot;Step&quot; Minimum=&quot;0.0000&quot; Maximum=&quot;1.0000&quot; /&gt;|,|&lt;PIN Name=&quot;backbuffer&quot; Type=&quot;Value&quot; SliceCount=&quot;1&quot; Height=&quot;150&quot; Parent=&quot;1&quot; AllInOne=&quot;False&quot; Collapsed=&quot;False&quot; InterpolationIn=&quot;Cubic&quot; Minimum=&quot;0.0000&quot; Maximum=&quot;256.0000&quot; /&gt;|,|&lt;PIN Name=&quot;floor&quot; Type=&quot;Value&quot; SliceCount=&quot;1&quot; Height=&quot;110&quot; Parent=&quot;1&quot; AllInOne=&quot;False&quot; Collapsed=&quot;True&quot; InterpolationIn=&quot;Step&quot; Minimum=&quot;-1.0000&quot; Maximum=&quot;1.0000&quot; /&gt;|,|&lt;PIN Name=&quot;floor_color&quot; Type=&quot;Value&quot; SliceCount=&quot;1&quot; Height=&quot;150&quot; Parent=&quot;1&quot; AllInOne=&quot;False&quot; Collapsed=&quot;True&quot; InterpolationIn=&quot;Step&quot; Minimum=&quot;0.0000&quot; Maximum=&quot;1.0000&quot; /&gt;|,|&lt;PIN Name=&quot;do_it&quot; Type=&quot;Value&quot; SliceCount=&quot;1&quot; Height=&quot;150&quot; Parent=&quot;1&quot; AllInOne=&quot;False&quot; Collapsed=&quot;False&quot; InterpolationIn=&quot;Step&quot; Minimum=&quot;0.0000&quot; Maximum=&quot;1.0000&quot; /&gt;|,|&lt;PIN Name=&quot;clip_1&quot; Type=&quot;Value&quot; SliceCount=&quot;1&quot; Height=&quot;150&quot; Parent=&quot;1&quot; AllInOne=&quot;False&quot; Collapsed=&quot;True&quot; InterpolationIn=&quot;Step&quot; Minimum=&quot;0.0000&quot; Maximum=&quot;1.0000&quot; /&gt;|,|&lt;PIN Name=&quot;select_clip&quot; Type=&quot;Value&quot; SliceCount=&quot;1&quot; Height=&quot;150&quot; Parent=&quot;1&quot; AllInOne=&quot;False&quot; Collapsed=&quot;True&quot; InterpolationIn=&quot;Step&quot; Minimum=&quot;-1.0000&quot; Maximum=&quot;1.0000&quot; /&gt;|,|&lt;PIN Name=&quot;scale_w&quot; Type=&quot;Value&quot; SliceCount=&quot;1&quot; Height=&quot;150&quot; Parent=&quot;1&quot; AllInOne=&quot;False&quot; Collapsed=&quot;True&quot; InterpolationIn=&quot;Cubic&quot; Minimum=&quot;-5.0000&quot; Maximum=&quot;10.0000&quot; /&gt;|,|&lt;PIN Name=&quot;back_transform&quot; Type=&quot;Value&quot; SliceCount=&quot;1&quot; Height=&quot;150&quot; Parent=&quot;1&quot; AllInOne=&quot;False&quot; Collapsed=&quot;True&quot; InterpolationIn=&quot;Step&quot; Minimum=&quot;-1.0000&quot; Maximum=&quot;1.0000&quot; /&gt;|,|&lt;PIN Name=&quot;anotha_transform&quot; Type=&quot;Value&quot; SliceCount=&quot;1&quot; Height=&quot;150&quot; Parent=&quot;1&quot; AllInOne=&quot;False&quot; Collapsed=&quot;True&quot; InterpolationIn=&quot;Step&quot; Minimum=&quot;-1.0000&quot; Maximum=&quot;1.0000&quot; /&gt;|,|&lt;PIN Name=&quot;rotate_order&quot; Type=&quot;Value&quot; SliceCount=&quot;1&quot; Height=&quot;150&quot; Parent=&quot;1&quot; AllInOne=&quot;False&quot; Collapsed=&quot;True&quot; InterpolationIn=&quot;Step&quot; Minimum=&quot;0.0000&quot; Maximum=&quot;2.0000&quot; /&gt;|,|&lt;PIN Name=&quot;move_it&quot; Type=&quot;Value&quot; SliceCount=&quot;1&quot; Height=&quot;150&quot; Parent=&quot;1&quot; AllInOne=&quot;False&quot; Collapsed=&quot;True&quot; InterpolationIn=&quot;Cubic&quot; Minimum=&quot;-5.0000&quot; Maximum=&quot;5.0000&quot; /&gt;|,|&lt;PIN Name=&quot;text&quot; Type=&quot;String&quot; SliceCount=&quot;1&quot; Height=&quot;54&quot; Parent=&quot;1&quot; AllInOne=&quot;False&quot; Collapsed=&quot;True&quot; /&gt;|,|&lt;PIN Name=&quot;spinme&quot; Type=&quot;Value&quot; SliceCount=&quot;1&quot; Height=&quot;150&quot; Parent=&quot;1&quot; AllInOne=&quot;False&quot; Collapsed=&quot;False&quot; InterpolationIn=&quot;Step&quot; Minimum=&quot;-5.0000&quot; Maximum=&quot;5.0000&quot; /&gt;|">
+   <PIN pinname="Pin Settings" slicecount="17" values="|&lt;PIN Name=&quot;Ruler0&quot; Type=&quot;Ruler&quot; SliceCount=&quot;0&quot; Height=&quot;40&quot; Parent=&quot;0&quot; /&gt;|,|&lt;PIN Name=&quot;colorize&quot; Type=&quot;Value&quot; SliceCount=&quot;1&quot; Height=&quot;110&quot; Parent=&quot;1&quot; AllInOne=&quot;False&quot; Collapsed=&quot;True&quot; InterpolationIn=&quot;Step&quot; Minimum=&quot;0.0000&quot; Maximum=&quot;1.0000&quot; /&gt;|,|&lt;PIN Name=&quot;fire_on&quot; Type=&quot;Value&quot; SliceCount=&quot;1&quot; Height=&quot;150&quot; Parent=&quot;1&quot; AllInOne=&quot;False&quot; Collapsed=&quot;True&quot; InterpolationIn=&quot;Step&quot; Minimum=&quot;0.0000&quot; Maximum=&quot;1.0000&quot; /&gt;|,|&lt;PIN Name=&quot;backbuffer&quot; Type=&quot;Value&quot; SliceCount=&quot;1&quot; Height=&quot;150&quot; Parent=&quot;1&quot; AllInOne=&quot;False&quot; Collapsed=&quot;True&quot; InterpolationIn=&quot;Cubic&quot; Minimum=&quot;0.0000&quot; Maximum=&quot;256.0000&quot; /&gt;|,|&lt;PIN Name=&quot;floor&quot; Type=&quot;Value&quot; SliceCount=&quot;1&quot; Height=&quot;110&quot; Parent=&quot;1&quot; AllInOne=&quot;False&quot; Collapsed=&quot;True&quot; InterpolationIn=&quot;Step&quot; Minimum=&quot;-1.0000&quot; Maximum=&quot;1.0000&quot; /&gt;|,|&lt;PIN Name=&quot;floor_color&quot; Type=&quot;Value&quot; SliceCount=&quot;1&quot; Height=&quot;150&quot; Parent=&quot;1&quot; AllInOne=&quot;False&quot; Collapsed=&quot;True&quot; InterpolationIn=&quot;Step&quot; Minimum=&quot;0.0000&quot; Maximum=&quot;1.0000&quot; /&gt;|,|&lt;PIN Name=&quot;do_it&quot; Type=&quot;Value&quot; SliceCount=&quot;1&quot; Height=&quot;150&quot; Parent=&quot;1&quot; AllInOne=&quot;False&quot; Collapsed=&quot;True&quot; InterpolationIn=&quot;Step&quot; Minimum=&quot;0.0000&quot; Maximum=&quot;1.0000&quot; /&gt;|,|&lt;PIN Name=&quot;clip_1&quot; Type=&quot;Value&quot; SliceCount=&quot;1&quot; Height=&quot;150&quot; Parent=&quot;1&quot; AllInOne=&quot;False&quot; Collapsed=&quot;True&quot; InterpolationIn=&quot;Step&quot; Minimum=&quot;0.0000&quot; Maximum=&quot;1.0000&quot; /&gt;|,|&lt;PIN Name=&quot;select_clip&quot; Type=&quot;Value&quot; SliceCount=&quot;1&quot; Height=&quot;150&quot; Parent=&quot;1&quot; AllInOne=&quot;False&quot; Collapsed=&quot;True&quot; InterpolationIn=&quot;Step&quot; Minimum=&quot;-1.0000&quot; Maximum=&quot;1.0000&quot; /&gt;|,|&lt;PIN Name=&quot;scale_w&quot; Type=&quot;Value&quot; SliceCount=&quot;1&quot; Height=&quot;150&quot; Parent=&quot;1&quot; AllInOne=&quot;False&quot; Collapsed=&quot;True&quot; InterpolationIn=&quot;Cubic&quot; Minimum=&quot;-5.0000&quot; Maximum=&quot;10.0000&quot; /&gt;|,|&lt;PIN Name=&quot;back_transform&quot; Type=&quot;Value&quot; SliceCount=&quot;1&quot; Height=&quot;150&quot; Parent=&quot;1&quot; AllInOne=&quot;False&quot; Collapsed=&quot;True&quot; InterpolationIn=&quot;Step&quot; Minimum=&quot;-1.0000&quot; Maximum=&quot;1.0000&quot; /&gt;|,|&lt;PIN Name=&quot;anotha_transform&quot; Type=&quot;Value&quot; SliceCount=&quot;1&quot; Height=&quot;150&quot; Parent=&quot;1&quot; AllInOne=&quot;False&quot; Collapsed=&quot;True&quot; InterpolationIn=&quot;Step&quot; Minimum=&quot;-1.0000&quot; Maximum=&quot;1.0000&quot; /&gt;|,|&lt;PIN Name=&quot;rotate_order&quot; Type=&quot;Value&quot; SliceCount=&quot;1&quot; Height=&quot;150&quot; Parent=&quot;1&quot; AllInOne=&quot;False&quot; Collapsed=&quot;True&quot; InterpolationIn=&quot;Step&quot; Minimum=&quot;0.0000&quot; Maximum=&quot;2.0000&quot; /&gt;|,|&lt;PIN Name=&quot;move_it&quot; Type=&quot;Value&quot; SliceCount=&quot;1&quot; Height=&quot;150&quot; Parent=&quot;1&quot; AllInOne=&quot;False&quot; Collapsed=&quot;True&quot; InterpolationIn=&quot;Cubic&quot; Minimum=&quot;-5.0000&quot; Maximum=&quot;5.0000&quot; /&gt;|,|&lt;PIN Name=&quot;text&quot; Type=&quot;String&quot; SliceCount=&quot;1&quot; Height=&quot;54&quot; Parent=&quot;1&quot; AllInOne=&quot;False&quot; Collapsed=&quot;True&quot; /&gt;|,|&lt;PIN Name=&quot;spinme&quot; Type=&quot;Value&quot; SliceCount=&quot;1&quot; Height=&quot;150&quot; Parent=&quot;1&quot; AllInOne=&quot;False&quot; Collapsed=&quot;True&quot; InterpolationIn=&quot;Step&quot; Minimum=&quot;-5.0000&quot; Maximum=&quot;5.0000&quot; /&gt;|,|&lt;PIN Name=&quot;scale_h&quot; Type=&quot;Value&quot; SliceCount=&quot;1&quot; Height=&quot;150&quot; Parent=&quot;1&quot; AllInOne=&quot;False&quot; Collapsed=&quot;False&quot; InterpolationIn=&quot;Cubic&quot; Minimum=&quot;-5.0000&quot; Maximum=&quot;10.0000&quot; /&gt;|">
    </PIN>
    <PIN pinname="Time In" visible="1" slicecount="1" values="0">
    </PIN>
@@ -1611,6 +1611,16 @@
    </PIN>
    <PIN pinname="spinme" visible="1">
    </PIN>
+   <PIN pinname="scale_h-Time0" slicecount="8" values="31.4824657440186,34.1313321728409,43.5517349243164,47.664981842041,52.4406280517578,55.9021644592285,61.6713943481445,64.1713964022122">
+   </PIN>
+   <PIN pinname="scale_h-Value0" slicecount="8" values="2.09999990463257,0.499999999999999,1,1.53333333333333,-0.933333365122474,-5,0.200000055631002,-2.77">
+   </PIN>
+   <PIN pinname="scale_h-InType0" slicecount="8" values="2,2,2,2,2,2,2,2">
+   </PIN>
+   <PIN pinname="scale_h-OutType0" slicecount="8" values="2,2,2,2,2,2,2,2">
+   </PIN>
+   <PIN pinname="scale_h" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="115" srcpinname="Y Output Value" dstnodeid="176" dstpinname="Play">
    </LINK>
@@ -1737,7 +1747,7 @@
    </PIN>
    <PIN pinname="Y" visible="1" slicecount="1" values="3.52">
    </PIN>
-   <PIN pinname="Z" slicecount="1" values="0.84" visible="1">
+   <PIN pinname="Z" slicecount="1" visible="1" values="0.84">
    </PIN>
    <PIN pinname="X" slicecount="1" values="0">
    </PIN>
@@ -1867,7 +1877,7 @@
    </PIN>
    <PIN pinname="Italic" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|" visible="1">
+   <PIN pinname="Color" slicecount="1" visible="1" values="|1.00000,1.00000,1.00000,1.00000|">
    </PIN>
    <PIN pinname="Quality" slicecount="1" values="ClearType">
    </PIN>
@@ -1949,5 +1959,21 @@
    <LINK srcnodeid="176" srcpinname="text" dstnodeid="198" dstpinname="Input String">
    </LINK>
    <LINK srcnodeid="176" srcpinname="spinme" dstnodeid="157" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="199" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="7305" top="735" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7305" top="735" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="-2.77">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="176" srcpinname="scale_h" dstnodeid="103" dstpinname="Input 3">
    </LINK>
    </PATCH>
