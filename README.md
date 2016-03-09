@@ -29,6 +29,7 @@
 | P_2_3_4_01 Drawing with elastic Brush |
 | :---: |
 | <a href="https://github.com/pussinboot/learning-vvvvv/tree/master/parasitic_redesign/P_2_3_4_01%20Drawing%20with%20elastic%20Brush"><img src="./previews/parasitic_redesign/P_2_3_4_01.png" height="200px"></a> |
+
 | P_4_1_1_01 Image Details in the Grid |
 | :---: |
 | <a href="https://github.com/pussinboot/learning-vvvvv/tree/master/parasitic_redesign/P_4_1_1_01%20Image%20Details%20in%20the%20Grid"><img src="./previews/parasitic_redesign/P_4_1_1_01.gif" height="200px"></a> |
