@@ -30,6 +30,6 @@
 | :---: |
 | <a href="https://github.com/pussinboot/learning-vvvvv/tree/master/parasitic_redesign/P_2_3_4_01%20Drawing%20with%20elastic%20Brush"><img src="./previews/parasitic_redesign/P_2_3_4_01.png" height="200px"></a> |
 
-| P_4_1_1_01 Image Details in the Grid |
-| :---: |
-| <a href="https://github.com/pussinboot/learning-vvvvv/tree/master/parasitic_redesign/P_4_1_1_01%20Image%20Details%20in%20the%20Grid"><img src="./previews/parasitic_redesign/P_4_1_1_01.gif" height="200px"></a> |
+| P_4_1_1_01 Image Details in the Grid | P_4_1_2_01 Feedback of Image Samples |
+| :---: | :---: |
+| <a href="https://github.com/pussinboot/learning-vvvvv/tree/master/parasitic_redesign/P_4_1_1_01%20Image%20Details%20in%20the%20Grid"><img src="./previews/parasitic_redesign/P_4_1_1_01.gif" height="200px"></a> | <a href="https://github.com/pussinboot/learning-vvvvv/tree/master/parasitic_redesign/P_4_1_2_01%20Feedback%20of%20Image%20Samples"><img src="./previews/parasitic_redesign/P_4_1_2_01.gif" height="200px"></a> |
