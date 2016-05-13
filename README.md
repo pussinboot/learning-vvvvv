@@ -1,5 +1,7 @@
 ### reference for things i've made in vvvv
 
+<img src="./previews/bouncing_cubes.gif">
+
 #### parasitic design tutorial series
 
 | P_1_0 Hello Color  |
