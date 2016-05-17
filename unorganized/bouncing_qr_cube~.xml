@@ -20,34 +20,6 @@
    <PIN pinname="Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
    </PIN>
    </NODE>
-   <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="4">
-   <BOUNDS type="Node" left="10935" top="3690" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="10935" top="3690" width="6000" height="4500">
-   </BOUNDS>
-   <BOUNDS type="Window" left="-21510" top="11205" width="19320" height="11160">
-   </BOUNDS>
-   <PIN pinname="Layers" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Background Color" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|" visible="1">
-   </PIN>
-   <PIN pinname="Actual BackBuffer SizeXY" visible="1">
-   </PIN>
-   <PIN pinname="View" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Projection" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Aspect Ratio" visible="1">
-   </PIN>
-   <PIN pinname="Enabled" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Clear" slicecount="1" values="0" visible="1">
-   </PIN>
-   <PIN pinname="Clear Depth" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Texture Out" visible="1">
-   </PIN>
-   </NODE>
    <NODE systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (Value)" componentmode="Hidden" id="6">
    <BOUNDS type="Node" left="12045" top="4110" width="100" height="100">
    </BOUNDS>
@@ -282,8 +254,6 @@
    <PIN pinname="Enabled" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="63" srcpinname="View" dstnodeid="4" dstpinname="View">
-   </LINK>
    <NODE systemname="AspectRatio (Transform)" nodename="AspectRatio (Transform)" componentmode="Hidden" id="64">
    <BOUNDS type="Node" left="12945" top="3660" width="100" height="100">
    </BOUNDS>
@@ -299,10 +269,6 @@
    <LINK srcnodeid="10" srcpinname="X" dstnodeid="64" dstpinname="Aspect Width">
    </LINK>
    <LINK srcnodeid="10" srcpinname="Y" dstnodeid="64" dstpinname="Aspect Height">
-   </LINK>
-   <LINK srcnodeid="64" srcpinname="Transform Out" dstnodeid="4" dstpinname="Aspect Ratio">
-   </LINK>
-   <LINK srcnodeid="63" srcpinname="Projection" dstnodeid="4" dstpinname="Projection">
    </LINK>
    <NODE systemname="LE (Value)" nodename="LE (Value)" componentmode="Hidden" id="67">
    <BOUNDS type="Node" left="5205" top="4815" width="100" height="100">
@@ -576,8 +542,6 @@
    </LINK>
    <LINK srcnodeid="59" srcpinname="Bang" dstnodeid="17" dstpinname="Reset">
    </LINK>
-   <LINK srcnodeid="90" srcpinname="Output" dstnodeid="4" dstpinname="Clear">
-   </LINK>
    <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="92">
    <BOUNDS type="Node" left="9600" top="630" width="100" height="100">
    </BOUNDS>
@@ -694,8 +658,6 @@
    <PIN pinname="Output String" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="4" srcpinname="Actual BackBuffer SizeXY" dstnodeid="6" dstpinname="Input 1">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="105" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="10380" top="495" width="735" height="285">
    </BOUNDS>
@@ -1054,8 +1016,6 @@
    </LINK>
    <LINK srcnodeid="3" srcpinname="Layer" dstnodeid="127" dstpinname="Input 2">
    </LINK>
-   <LINK srcnodeid="127" srcpinname="Output" dstnodeid="4" dstpinname="Layers">
-   </LINK>
    <NODE systemname="SpellValue (String)" nodename="SpellValue (String)" componentmode="Hidden" id="129">
    <BOUNDS type="Node" left="14370" top="4800" width="100" height="100">
    </BOUNDS>
@@ -1335,13 +1295,57 @@
    <LINK srcnodeid="154" srcpinname="Y Output Value" dstnodeid="151" dstpinname="Input 1">
    </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="155" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="10110" top="7995" width="795" height="240">
+   <BOUNDS type="Box" left="9240" top="8415" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="10110" top="7995" width="0" height="0">
+   <BOUNDS type="Node" left="9240" top="8415" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="|texture out|">
    </PIN>
+   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="4" srcpinname="Texture Out" dstnodeid="155" dstpinname="Input Node">
+   <NODE systemname="Renderer (DX11 TempTarget)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11 TempTarget)" componentmode="Hidden" id="156">
+   <BOUNDS type="Node" left="8625" top="6465" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture SizeXY" visible="1">
+   </PIN>
+   <PIN pinname="View" visible="1">
+   </PIN>
+   <PIN pinname="Projection" visible="1">
+   </PIN>
+   <PIN pinname="Buffers" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Clear" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="157" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="9975" top="5115" width="795" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="9975" top="5115" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="1280,720">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="2">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="157" srcpinname="Y Output Value" dstnodeid="156" dstpinname="Texture SizeXY">
+   </LINK>
+   <LINK srcnodeid="63" srcpinname="View" dstnodeid="156" dstpinname="View">
+   </LINK>
+   <LINK srcnodeid="63" srcpinname="Projection" dstnodeid="156" dstpinname="Projection">
+   </LINK>
+   <LINK srcnodeid="156" srcpinname="Buffers" dstnodeid="155" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="127" srcpinname="Output" dstnodeid="156" dstpinname="Layer">
+   </LINK>
+   <LINK srcnodeid="90" srcpinname="Output" dstnodeid="156" dstpinname="Clear">
    </LINK>
    </PATCH>
