@@ -2,16 +2,6 @@
    <PATCH nodename="C:\Code\vvvv\learning-vvvvv\unorganized\double_memetext.v4p" scrollx="0" scrolly="0" systemname="double_memetext" filename="C:\Code\vvvv\learning-vvvvv\unorganized\double_memetext.v4p">
    <BOUNDS type="Window" left="9900" top="6000" width="9000" height="6000">
    </BOUNDS>
-   <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="FullScreen" id="1">
-   <BOUNDS type="Node" left="4920" top="3660" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="4920" top="3660" width="6000" height="4500">
-   </BOUNDS>
-   <BOUNDS type="Window" left="-14400" top="15090" width="6120" height="4860">
-   </BOUNDS>
-   <PIN pinname="Layers" visible="1" slicecount="1" values="||">
-   </PIN>
-   </NODE>
    <NODE systemname="Text (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.Text.dll" nodename="Text (DX11.Layer)" componentmode="Hidden" id="2">
    <BOUNDS type="Node" left="5100" top="2835" width="100" height="100">
    </BOUNDS>
@@ -61,6 +51,8 @@
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|input string|">
+   </PIN>
    </NODE>
    <NODE systemname="Count (Value)" nodename="Count (Value)" componentmode="Hidden" id="5">
    <BOUNDS type="Node" left="585" top="1710" width="100" height="100">
@@ -99,7 +91,7 @@
    </BOUNDS>
    <PIN pinname="Variable Names" slicecount="1" values="|t, ph, amp, freq|">
    </PIN>
-   <PIN pinname="Term" slicecount="1" values="amp*sin(t*(2*pi)-ph)" visible="1">
+   <PIN pinname="Term" slicecount="1" visible="1" values="amp*sin(t*(2*pi)-ph)">
    </PIN>
    <PIN pinname="t" slicecount="13" visible="1" values="-14.6767306411084,-14.6767306411084,-14.6767306411084,-14.6767306411084,-14.6767306411084,-14.6767306411084,-14.6767306411084,-14.6767306411084,-14.6767306411084,-14.6767306411084,-14.6767306411084,-14.6767306411084,-14.6767306411084">
    </PIN>
@@ -213,6 +205,8 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="velocity">
+   </PIN>
    </NODE>
    <NODE systemname="Select (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Select (Value)" componentmode="Hidden" id="30">
    <BOUNDS type="Node" left="345" top="2820" width="100" height="100">
@@ -228,14 +222,12 @@
    </LINK>
    <LINK srcnodeid="30" srcpinname="Output" dstnodeid="28" dstpinname="Position In">
    </LINK>
-   <LINK srcnodeid="2" srcpinname="Layer" dstnodeid="1" dstpinname="Layers">
-   </LINK>
    <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="31">
    <BOUNDS type="Node" left="2790" top="2370" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
-   <PIN pinname="Input 2" slicecount="1" values="0.11" visible="1">
+   <PIN pinname="Input 2" slicecount="1" visible="1" values="0.11">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -346,6 +338,8 @@
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="spacing">
    </PIN>
    </NODE>
    <LINK srcnodeid="44" srcpinname="Y Output Value" dstnodeid="43" dstpinname="Input 2">
@@ -579,7 +573,7 @@
    </PIN>
    <PIN pinname="Hue" visible="1" slicecount="1" values="0.25">
    </PIN>
-   <PIN pinname="Saturation" slicecount="72" values="0.363618620900773,-0.732274394993403,-0.902754989099572,0.0676218419011224,0.952541509702761,0.633685992444662,-0.485990764680206,-0.991496258158272,-0.243997468365863,0.811853340361586,0.841723763898142,-0.192134972223346,-0.983182965307802,-0.531732606398871,0.591695309550987,0.96736774870696,0.636312591179847,0.951500992719546,0.0642291634679622,-0.904212328577701,-0.729954681447181,0.366783847401948,0.999998960960842,0.369464492975726,-0.727981058541791,-0.905439896052891,0.0613517451070132,0.950610063500838,0.638534063700536,-0.480489930353527,-0.992294345062235,-0.25008589346174,0.808168829735602,0.845099471341913,-0.185965100012062,-0.98201610985565,-0.537043382327579,0.586618400072506,0.968940654574096,0.126763290013624,-0.875611295707831,-0.771431323129928,0.307645674199587,0.997935175530057,0.427083206001001,-0.683495547193501,-0.930306191146241,-0.00144155375743989,0.929244848481921,0.685597242121331,-0.42447449232637,-0.998116207348786,-0.310387672388793,0.76959356123481,0.877000243345955,-0.123902916662641,-0.968223654891494,-0.588950883048654,0.534609094140398,0.98255635033188,0.188797139766409,-0.843554625082545,-0.809863477813622,0.247293364070939,0.991932995874682,0.483016416728101,-0.636312591179844,-0.951500992719546,-0.064229163467965,0.904212328577699,0.729954681447183,-0.366783847401945" visible="1">
+   <PIN pinname="Saturation" slicecount="72" visible="1" values="0.363618620900773,-0.732274394993403,-0.902754989099572,0.0676218419011224,0.952541509702761,0.633685992444662,-0.485990764680206,-0.991496258158272,-0.243997468365863,0.811853340361586,0.841723763898142,-0.192134972223346,-0.983182965307802,-0.531732606398871,0.591695309550987,0.96736774870696,0.636312591179847,0.951500992719546,0.0642291634679622,-0.904212328577701,-0.729954681447181,0.366783847401948,0.999998960960842,0.369464492975726,-0.727981058541791,-0.905439896052891,0.0613517451070132,0.950610063500838,0.638534063700536,-0.480489930353527,-0.992294345062235,-0.25008589346174,0.808168829735602,0.845099471341913,-0.185965100012062,-0.98201610985565,-0.537043382327579,0.586618400072506,0.968940654574096,0.126763290013624,-0.875611295707831,-0.771431323129928,0.307645674199587,0.997935175530057,0.427083206001001,-0.683495547193501,-0.930306191146241,-0.00144155375743989,0.929244848481921,0.685597242121331,-0.42447449232637,-0.998116207348786,-0.310387672388793,0.76959356123481,0.877000243345955,-0.123902916662641,-0.968223654891494,-0.588950883048654,0.534609094140398,0.98255635033188,0.188797139766409,-0.843554625082545,-0.809863477813622,0.247293364070939,0.991932995874682,0.483016416728101,-0.636312591179844,-0.951500992719546,-0.064229163467965,0.904212328577699,0.729954681447183,-0.366783847401945">
    </PIN>
    <PIN pinname="Value" slicecount="1" values="1">
    </PIN>
@@ -703,17 +697,79 @@
    <NODE systemname="Select (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Select (Value)" componentmode="Hidden" id="73">
    <BOUNDS type="Node" left="7605" top="3780" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="2" values="0,-0.25">
    </PIN>
    <PIN pinname="Select" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="72" srcpinname="Y Output Value" dstnodeid="73" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="5" srcpinname="Count" dstnodeid="73" dstpinname="Select">
    </LINK>
    <LINK srcnodeid="73" srcpinname="Output" dstnodeid="71" dstpinname="Z">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="74" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="6240" top="5430" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6240" top="5430" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|text layer out|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Layer" dstnodeid="74" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="Select (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Select (Value)" componentmode="Hidden" id="75">
+   <BOUNDS type="Node" left="7380" top="2175" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Select" visible="1" slicecount="4" values="0,0,0,0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Vector (4d Join)" nodename="Vector (4d Join)" componentmode="Hidden" id="76">
+   <BOUNDS type="Node" left="6990" top="1725" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="XYZW" visible="1">
+   </PIN>
+   <PIN pinname="Y" slicecount="1" values="-0.25">
+   </PIN>
+   <PIN pinname="Z" slicecount="1" values="-0.5">
+   </PIN>
+   <PIN pinname="W" slicecount="1" values="0.25">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="76" srcpinname="XYZW" dstnodeid="75" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="78" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="7725" top="1650" width="1230" height="435">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7725" top="1650" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="4" visible="1" values="1,0,0,0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Columns" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="4" values="1,0,0,0">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="rotates">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="78" srcpinname="Y Output Value" dstnodeid="75" dstpinname="Select">
+   </LINK>
+   <LINK srcnodeid="75" srcpinname="Output" dstnodeid="73" dstpinname="Input">
    </LINK>
    </PATCH>

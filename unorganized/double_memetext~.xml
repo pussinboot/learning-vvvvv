@@ -2,12 +2,12 @@
    <PATCH nodename="C:\Code\vvvv\learning-vvvvv\unorganized\double_memetext.v4p" scrollx="0" scrolly="0" systemname="double_memetext" filename="C:\Code\vvvv\learning-vvvvv\unorganized\double_memetext.v4p">
    <BOUNDS type="Window" left="9900" top="6000" width="9000" height="6000">
    </BOUNDS>
-   <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="1">
+   <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="FullScreen" id="1">
    <BOUNDS type="Node" left="4920" top="3660" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="4920" top="3660" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="20040" top="11505" width="6120" height="4860">
+   <BOUNDS type="Window" left="-14400" top="15090" width="6120" height="4860">
    </BOUNDS>
    <PIN pinname="Layers" visible="1" slicecount="1" values="||">
    </PIN>
@@ -51,7 +51,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="75" top="15" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="1" values="|doubles meme |">
+   <PIN pinname="Input String" slicecount="1" visible="1" values="|(´・ω・`) |">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="text">
    </PIN>
@@ -205,7 +205,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="210" top="2460" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="-1.21">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="-0.17">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -339,7 +339,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3045" top="1860" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.05">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
