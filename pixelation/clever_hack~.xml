@@ -1,41 +1,119 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Code\vvvv\learning-vvvvv\pixelation\clever_hack.v4p" systemname="clever_hack" filename="C:\Code\vvvv\learning-vvvvv\pixelation\clever_hack.v4p">
-   <BOUNDS type="Window" left="9900" top="6000" width="9000" height="6000">
+   <PATCH nodename="C:\Code\vvvv\learning-vvvvv\pixelation\clever_hack.v4p" systemname="clever_hack" filename="C:\Code\vvvv\learning-vvvvv\pixelation\clever_hack.v4p" scrollx="0" scrolly="2055">
+   <BOUNDS type="Window" left="7335" top="5160" width="9000" height="6000">
    </BOUNDS>
-   <NODE systemname="GDITexture (EX9.Texture)" nodename="GDITexture (EX9.Texture)" componentmode="Hidden" id="0">
-   <BOUNDS type="Node" left="1845" top="2280" width="100" height="100">
+   <PACK Name="opencv" Version="0.2.0">
+   </PACK>
+   <PACK Name="addonpack" Version="34.1.0">
+   </PACK>
+   <NODE systemname="Blend (EX9.Texture Mixer)" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\Mixer\Blend\Blend (EX9.Texture Mixer).v4p" nodename="Blend (EX9.Texture Mixer)" componentmode="Hidden" id="6">
+   <BOUNDS type="Node" left="3450" top="2580" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Source" visible="1">
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Mode" slicecount="1" values="| Multiply|">
    </PIN>
    </NODE>
-   <NODE systemname="Renderer (GDI)" nodename="Renderer (GDI)" componentmode="InAWindow" id="1">
-   <BOUNDS type="Node" left="3420" top="1395" width="100" height="100">
+   <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="InAWindow" id="7">
+   <BOUNDS type="Node" left="1095" top="5025" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="3420" top="1395" width="2400" height="1800">
+   <BOUNDS type="Box" left="1095" top="5025" width="2400" height="1800">
    </BOUNDS>
-   <BOUNDS type="Window" left="15105" top="9585" width="6120" height="4860">
+   <BOUNDS type="Window" left="18660" top="6225" width="6120" height="4860">
    </BOUNDS>
-   <PIN pinname="Layers" visible="1">
+   <PIN pinname="Layers" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="X" visible="1">
    </PIN>
    <PIN pinname="Y" visible="1">
    </PIN>
-   <PIN pinname="GDI Out" visible="1">
+   <PIN pinname="Actual Backbuffer Width" visible="1">
+   </PIN>
+   <PIN pinname="Actual Backbuffer Height" visible="1">
+   </PIN>
+   <PIN pinname="EX9 Out" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="Vector (2d Join)" nodename="Vector (2d Join)" componentmode="Hidden" id="2">
-   <BOUNDS type="Node" left="3450" top="1830" width="100" height="100">
+   <NODE systemname="FullscreenQuad (DX9)" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\misc\FullscreenQuad (DX9).v4p" nodename="FullscreenQuad (DX9)" componentmode="Hidden" id="8">
+   <BOUNDS type="Node" left="2685" top="4410" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Blend Mode" slicecount="1" values="| Add|">
+   </PIN>
+   </NODE>
+   <NODE systemname="FileStream (EX9.Texture VLC)" filename="%VVVV%\addonpack\lib\nodes\plugins\FileStreamVLC.dll" nodename="FileStream (EX9.Texture VLC)" componentmode="Hidden" id="9">
+   <BOUNDS type="Node" left="4770" top="2370" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Volume" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Filename" visible="1">
+   </PIN>
+   <PIN pinname="Loop" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="Texture Out" dstnodeid="6" dstpinname="Input 2">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="11" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="6735" top="1755" width="1560" height="1005">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6735" top="1755" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="|..\..\..\..\Users\Public\Videos\Sample Videos\Wildlife.wmv|">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="|C:\video.avi || deinterlace=1 || video-filter=gradient{type=1}|">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="|All Files (*.*)||*.*|">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="Filename">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="11" srcpinname="Output String" dstnodeid="9" dstpinname="Filename">
+   </LINK>
+   <NODE systemname="RoundRect (EX9.Geometry 2d)" filename="%VVVV%\addonpack\lib\nodes\plugins\2dMeshNodes.dll" nodename="RoundRect (EX9.Geometry 2d)" componentmode="Hidden" id="15">
+   <BOUNDS type="Node" left="4920" top="3645" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Inner RadiusXY" slicecount="2" values="0.02,0.02">
+   </PIN>
+   <PIN pinname="Outer Radius" slicecount="1" values="-0.16">
+   </PIN>
+   <PIN pinname="Corner Resolution" slicecount="1" values="2">
+   </PIN>
+   </NODE>
+   <NODE systemname="Translate (Transform)" nodename="Translate (Transform)" componentmode="Hidden" id="16">
+   <BOUNDS type="Node" left="2070" top="3075" width="100" height="100">
    </BOUNDS>
    <PIN pinname="X" visible="1">
    </PIN>
    <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Vector (2d Join)" nodename="Vector (2d Join)" componentmode="Hidden" id="18">
+   <BOUNDS type="Node" left="750" top="3750" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="X" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Y" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="XY" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="Vector (2d Split)" nodename="Vector (2d Split)" componentmode="Hidden" id="3">
-   <BOUNDS type="Node" left="3345" top="255" width="100" height="100">
+   <NODE systemname="Vector (2d Split)" nodename="Vector (2d Split)" componentmode="Hidden" id="17">
+   <BOUNDS type="Node" left="975" top="2265" width="100" height="100">
    </BOUNDS>
    <PIN pinname="XY" visible="1" slicecount="2" values="-0.453634085213033,0.0568561872909699">
    </PIN>
@@ -44,54 +122,214 @@
    <PIN pinname="Y" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="RoundRect (GDI)" nodename="RoundRect (GDI)" componentmode="Hidden" id="4">
-   <BOUNDS type="Node" left="3285" top="780" width="100" height="100">
+   <LINK srcnodeid="7" srcpinname="X" dstnodeid="18" dstpinname="X">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Y" dstnodeid="18" dstpinname="Y">
+   </LINK>
+   <NODE systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (Value)" componentmode="Hidden" id="19">
+   <BOUNDS type="Node" left="840" top="3150" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="Brush Style" slicecount="1" values="Solid">
-   </PIN>
-   <PIN pinname="X" visible="1">
-   </PIN>
-   <PIN pinname="Y" visible="1">
-   </PIN>
-   <PIN pinname="Radius" slicecount="1" values="0.4">
-   </PIN>
-   <PIN pinname="Pen Width" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Pen Mode" slicecount="1" values="Copy">
-   </PIN>
-   <PIN pinname="Pen Style" slicecount="1" values="Solid">
-   </PIN>
-   <PIN pinname="Enabled" slicecount="1" values="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="4" srcpinname="Layer" dstnodeid="1" dstpinname="Layers">
-   </LINK>
-   <LINK srcnodeid="1" srcpinname="X" dstnodeid="2" dstpinname="X">
-   </LINK>
-   <LINK srcnodeid="1" srcpinname="Y" dstnodeid="2" dstpinname="Y">
-   </LINK>
-   <NODE systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (Value)" componentmode="Hidden" id="5">
-   <BOUNDS type="Node" left="5625" top="630" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output 1" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="2" srcpinname="XY" dstnodeid="5" dstpinname="Input 1">
+   <LINK srcnodeid="18" srcpinname="XY" dstnodeid="19" dstpinname="Input 1">
    </LINK>
-   <LINK srcnodeid="5" srcpinname="Output 1" dstnodeid="3" dstpinname="XY">
+   <LINK srcnodeid="19" srcpinname="Output 1" dstnodeid="17" dstpinname="XY">
    </LINK>
-   <LINK srcnodeid="3" srcpinname="X" dstnodeid="4" dstpinname="X">
+   <LINK srcnodeid="17" srcpinname="X" dstnodeid="16" dstpinname="X">
    </LINK>
-   <LINK srcnodeid="3" srcpinname="Y" dstnodeid="4" dstpinname="Y">
+   <LINK srcnodeid="17" srcpinname="Y" dstnodeid="16" dstpinname="Y">
    </LINK>
-   <LINK srcnodeid="1" srcpinname="GDI Out" dstnodeid="0" dstpinname="Source">
+   <NODE componentmode="Hidden" id="21" nodename="Fill (EX9.RenderState)" systemname="Fill (EX9.RenderState)">
+   <BOUNDS height="0" left="4380" top="3510" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Render State Out" visible="1">
+   </PIN>
+   <PIN pinname="Fill Mode" slicecount="1" visible="1" values="Solid">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="20" nodename="DrawFixed (EX9.Effect)" systemname="DrawFixed (EX9.Effect)">
+   <BOUNDS height="0" left="4755" top="4170" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Mesh" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Render State" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="20" dstpinname="Render State" linkstyle="Bezier" srcnodeid="21" srcpinname="Render State Out">
+   <LINKPOINT x="4345" y="3975">
+   </LINKPOINT>
+   <LINKPOINT x="4835" y="3945">
+   </LINKPOINT>
    </LINK>
-   <PACK Name="opencv" Version="0.2.0">
-   </PACK>
-   <PACK Name="addonpack" Version="34.1.0">
-   </PACK>
+   <LINK srcnodeid="15" srcpinname="Output" dstnodeid="20" dstpinname="Mesh">
+   </LINK>
+   <LINK srcnodeid="16" srcpinname="Transform Out" dstnodeid="20" dstpinname="Transform">
+   </LINK>
+   <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="InABox" id="23">
+   <BOUNDS type="Node" left="3525" top="5355" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3525" top="5355" width="2400" height="1800">
+   </BOUNDS>
+   <BOUNDS type="Window" left="13845" top="11340" width="6120" height="4860">
+   </BOUNDS>
+   <PIN pinname="Layers" visible="1">
+   </PIN>
+   <PIN pinname="EX9 Out" visible="1">
+   </PIN>
+   <PIN pinname="Backbuffer Width" visible="1">
+   </PIN>
+   <PIN pinname="Backbuffer Height" visible="1">
+   </PIN>
+   <PIN pinname="Background Color" slicecount="1" values="|0.00000,0.00000,0.00000,0.00000|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="20" srcpinname="Layer" dstnodeid="23" dstpinname="Layers">
+   </LINK>
+   <NODE systemname="DX9Texture (EX9.Texture)" nodename="DX9Texture (EX9.Texture)" componentmode="Hidden" id="25">
+   <BOUNDS type="Node" left="6225" top="6750" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Source" visible="1">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="23" srcpinname="EX9 Out" dstnodeid="25" dstpinname="Source">
+   </LINK>
+   <LINK srcnodeid="25" srcpinname="Texture Out" dstnodeid="6" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Actual Backbuffer Width" dstnodeid="23" dstpinname="Backbuffer Width">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Actual Backbuffer Height" dstnodeid="23" dstpinname="Backbuffer Height">
+   </LINK>
+   <NODE systemname="Pixelate (EX9.Texture Mixer)" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\Mixer\Pixelate\Pixelate (EX9.Texture Mixer).v4p" nodename="Pixelate (EX9.Texture Mixer)" componentmode="Hidden" id="26">
+   <BOUNDS type="Node" left="2895" top="3435" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Fader" slicecount="1" values="0.43">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="Output" dstnodeid="26" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Output" dstnodeid="26" dstpinname="Input 2">
+   </LINK>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="29" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="7245" top="3465" width="1590" height="270">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7245" top="3465" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="| Subtract|">
+   </PIN>
+   <PIN pinname="Output Enum" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="8" srcpinname="Layer" dstnodeid="7" dstpinname="Layers">
+   </LINK>
+   <NODE id="28" systemname="Blend (EX9.Texture Mixer)" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\Mixer\Blend\Blend (EX9.Texture Mixer).v4p" nodename="Blend (EX9.Texture Mixer)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
+   <PIN pinname="Input 2" visible="1" slicecount="1" pintype="Input" values="||">
+   </PIN>
+   <PIN pinname="Input 1" visible="1" slicecount="1" pintype="Input" values="||">
+   </PIN>
+   <BOUNDS type="Node" left="7275" top="4545" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Mode" visible="1" slicecount="1" pintype="Input" values="| Add|">
+   </PIN>
+   <PIN pinname="Opacity" slicecount="1" pintype="Input" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Output" visible="1" pintype="Output">
+   </PIN>
+   <BOUNDS type="Box" left="4440" top="555" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="16185" top="1965" width="12435" height="7800">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Enabled" pintype="Input" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Evaluate" pintype="Input" visible="-1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Window Handle" pintype="Output" visible="-1">
+   </PIN>
+   <PIN pinname="Patch" pintype="Output" visible="-1">
+   </PIN>
+   <PIN pinname="ID" pintype="Output" visible="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="Texture Out" dstnodeid="28" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="29" srcpinname="Output Enum" dstnodeid="28" dstpinname="Mode">
+   </LINK>
+   <NODE id="32" systemname="Blend (EX9.Texture Mixer)" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\Mixer\Blend\Blend (EX9.Texture Mixer).v4p" nodename="Blend (EX9.Texture Mixer)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
+   <PIN pinname="Input 2" visible="1" slicecount="1" pintype="Input" values="||">
+   </PIN>
+   <PIN pinname="Input 1" visible="1" slicecount="1" pintype="Input" values="||">
+   </PIN>
+   <BOUNDS type="Node" left="6885" top="5190" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Mode" visible="1" slicecount="1" pintype="Input" values="| Add|">
+   </PIN>
+   <PIN pinname="Opacity" slicecount="1" pintype="Input" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Output" visible="1" pintype="Output">
+   </PIN>
+   <BOUNDS type="Box" left="4050" top="1200" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="16185" top="1965" width="12435" height="7800">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Enabled" pintype="Input" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Evaluate" pintype="Input" visible="-1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Window Handle" pintype="Output" visible="-1">
+   </PIN>
+   <PIN pinname="Patch" pintype="Output" visible="-1">
+   </PIN>
+   <PIN pinname="ID" pintype="Output" visible="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="28" srcpinname="Output" dstnodeid="32" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="26" srcpinname="Output" dstnodeid="32" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="32" srcpinname="Output" dstnodeid="8" dstpinname="Texture">
+   </LINK>
+   <NODE systemname="Blend (EX9.Texture Mixer)" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\Mixer\Blend\Blend (EX9.Texture Mixer).v4p" nodename="Blend (EX9.Texture Mixer)" componentmode="Hidden" id="33">
+   <BOUNDS type="Node" left="4215" top="3135" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Mode" slicecount="1" values="| Multiply|">
+   </PIN>
+   <PIN pinname="Opacity" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="26" srcpinname="Output" dstnodeid="33" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="33" srcpinname="Output" dstnodeid="28" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="Preview (EX9.Texture)" filename="%VVVV%\addonpack\lib\nodes\modules\TextureFX\misc\Preview\Preview (EX9.Texture).v4p" nodename="Preview (EX9.Texture)" componentmode="Hidden" id="34">
+   <BOUNDS type="Node" left="1425" top="6795" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="33" srcpinname="Output" dstnodeid="34" dstpinname="Input">
+   </LINK>
    </PATCH>
